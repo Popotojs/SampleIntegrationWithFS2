@@ -1,0 +1,179 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_google_search_title}",
+  "xtype" : "xcp_form",
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "google_search_initiate_staless_ds",
+      "actionModel" : "fs2_google_search_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "query",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_google_search_google_search_initiate_staless_ds_query_1",
+          "events" : ["text_input.change" ]
+        } ],
+        "mapping" : {
+          "query" : ["text_input" ]
+        }
+      } ],
+      "pageSize" : 10,
+      "actionType" : "datasource",
+      "autoLoad" : false
+    } ]
+  }, {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "column_box1",
+        "xtype" : "xcp_column_box",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "items" : [ {
+          "xcpId" : "columnvbox1",
+          "xtype" : "xcp_columnvbox",
+          "orientation" : "Vertical",
+          "width" : "100%",
+          "overflow_x" : "hidden",
+          "labelWidth" : 150,
+          "labelAlign" : "left",
+          "halign" : "left",
+          "valign" : "top",
+          "defaultMargins" : "5",
+          "items" : [ {
+            "xcpId" : "text_input",
+            "xtype" : "xcp_text_input",
+            "fieldLabel" : "${_UI_Page_bank_google_search_text_input_fieldLabel}",
+            "hstretch" : true,
+            "valueType" : "STRING"
+          } ]
+        } ]
+      }, {
+        "xcpId" : "column_box2",
+        "xtype" : "xcp_column_box",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "items" : [ {
+          "xcpId" : "columnhbox",
+          "xtype" : "xcp_columnhbox",
+          "orientation" : "Horizontal",
+          "width" : "100%",
+          "overflow_x" : "hidden",
+          "labelWidth" : 50,
+          "defaultMargins" : "5",
+          "labelAlign" : "left",
+          "halign" : "right",
+          "valign" : "top",
+          "items" : [ {
+            "xcpId" : "button",
+            "xtype" : "xcp_button",
+            "text" : "${_UI_Page_bank_google_search_button_text}",
+            "actionInstanceId" : "google_search_initiate_staless_ds"
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "xcpId" : "results_list",
+    "xtype" : "xcp_results_list",
+    "typeName" : "fs2_google_search_initiate",
+    "modelName" : "fs2_google_search_initiate_staless_ds_outputs",
+    "storeId" : "google_search_initiate_staless_ds",
+    "pageSize" : 10,
+    "selectionModel" : false,
+    "columns" : [ {
+      "xcpId" : "results_list_page_link_column1",
+      "xtype" : "xcp_results_list_page_link_column",
+      "text" : "${_UI_Page_bank_google_search_results_list_page_link_column1_text}",
+      "width" : 150,
+      "expression" : [ {
+        "propertyId" : "dataIndex",
+        "etype" : "bank_google_search_results_list_page_link_column1_dataIndex_1",
+        "events" : ["fs2_google_search_initiate_staless_ds_outputs.change","fs2_google_search_initiate_staless_ds_outputs.load" ]
+      } ],
+      "valueType" : "HTML",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_page_link_column",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_Page_bank_google_search_results_list_page_link_column_text}",
+      "width" : 150,
+      "expression" : [ {
+        "propertyId" : "dataIndex",
+        "etype" : "bank_google_search_results_list_page_link_column_dataIndex_1",
+        "events" : ["fs2_google_search_initiate_staless_ds_outputs.change","fs2_google_search_initiate_staless_ds_outputs.load" ]
+      } ],
+      "valueType" : "HTML",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_Page_bank_google_search_results_list_column_text}",
+      "width" : 150,
+      "expression" : [ {
+        "propertyId" : "dataIndex",
+        "etype" : "bank_google_search_results_list_column_dataIndex_1",
+        "events" : ["fs2_google_search_initiate_staless_ds_outputs.change","fs2_google_search_initiate_staless_ds_outputs.load" ]
+      } ],
+      "valueType" : "HTML",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column1",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_Page_bank_google_search_results_list_column1_text}",
+      "width" : 150,
+      "dataIndex" : "summary",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column2",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_Page_bank_google_search_results_list_column2_text}",
+      "expression" : [ {
+        "propertyId" : "dataIndex",
+        "etype" : "bank_google_search_results_list_column2_dataIndex_1",
+        "events" : ["fs2_google_search_initiate_staless_ds_outputs.change","fs2_google_search_initiate_staless_ds_outputs.load" ]
+      } ],
+      "valueType" : "HTML",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    } ]
+  } ]
+}

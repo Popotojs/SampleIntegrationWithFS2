@@ -1,0 +1,32 @@
+{
+  "padding" : "10 10 5 10",
+  "border" : false,
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "userorgroup_selecti_staless_ds_1",
+      "actionModel" : "xcp_userorgroup_selecti_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ ],
+        "mapping" : {
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : true
+    } ]
+  }, {
+    "xcpId" : "signoff_password",
+    "xtype" : "xcp_text_input",
+    "fieldLabel" : "${_UI_UIStep_xcp_signoff_usergroup_signoff_password_fieldLabel}",
+    "hstretch" : true,
+    "inputType" : "password"
+  }, {
+    "xcpId" : "username_dropdown_list",
+    "xtype" : "xcp_dropdown_list",
+    "fieldLabel" : "${_UI_UIStep_xcp_signoff_usergroup_username_dropdown_list_fieldLabel}",
+    "valueField" : "user_group_name",
+    "displayField" : "user_group_name",
+    "store" : "userorgroup_selecti_staless_ds_1"
+  } ]
+}

@@ -1,0 +1,291 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_user_preferences_title}",
+  "xtype" : "xcp_form",
+  "models" : [ "xcp.data.model.UserPreferences" ],
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "networklocation_selecti_ds",
+      "actionModel" : "xcp_networklocation_selecti_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ ],
+        "mapping" : {
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : true
+    }, {
+      "xcpId" : "userorgroup_selecti_staless_ds",
+      "actionModel" : "xcp_userorgroup_selecti_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ ],
+        "mapping" : {
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : true
+    }, {
+      "xcpId" : "update_preferences_button",
+      "showConfirmation" : false,
+      "redirectStyle" : "current",
+      "showSuccessNotification" : true,
+      "actionType" : "updatesetting",
+      "actionModel" : "xcp.data.model.UserPreferences",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "workflowAutoNextTask",
+          "setterFunName" : "setInputProperty",
+          "etype" : "update_preferences_update_workflowAutoNextTask",
+          "events" : ["workflowAutoNextTask.change" ]
+        }, {
+          "propertyId" : "role",
+          "setterFunName" : "setInputProperty",
+          "etype" : "update_preferences_update_role",
+          "events" : ["role.change" ]
+        }, {
+          "propertyId" : "delegate_task",
+          "setterFunName" : "setInputProperty",
+          "etype" : "update_preferences_update_delegate_task",
+          "events" : ["delegate_task.change" ]
+        }, {
+          "propertyId" : "delegateToUser",
+          "setterFunName" : "setInputProperty",
+          "etype" : "update_preferences_update_delegateToUser",
+          "events" : ["delegateToUser.change" ]
+        }, {
+          "propertyId" : "networkLocation",
+          "setterFunName" : "setInputProperty",
+          "etype" : "update_preferences_update_networkLocation",
+          "events" : ["networkLocation.change" ]
+        } ],
+        "mapping" : {
+          "workflowAutoNextTask" : [ "workflowAutoNextTask" ],
+          "role" : [ "role" ],
+          "delegate_task" : [ "delegate_task" ],
+          "delegateToUser" : [ "delegateToUser" ],
+          "networkLocation" : [ "networkLocation" ]
+        }
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnhbox",
+      "xtype" : "xcp_columnhbox",
+      "orientation" : "Horizontal",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 50,
+      "defaultMargins" : "5",
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "bottom",
+      "items" : [ {
+        "xcpId" : "rich_text",
+        "xtype" : "xcp_rich_text",
+        "html" : "${_UI_Page_bank_user_preferences_rich_text_html}"
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box1",
+    "xtype" : "xcp_column_box",
+    "title" : "${_UI_Page_bank_user_preferences_column_box1_title}",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "589",
+      "overflow_x" : "hidden",
+      "labelWidth" : 270,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "role",
+        "xtype" : "xcp_dropdown_list",
+        "fieldLabel" : "${_UI_Page_bank_user_preferences_role_fieldLabel}",
+        "store" : "xcp.picklist.RoleStore",
+        "valueType" : "STRING",
+        "name" : "xcp.data.model.UserPreferences@role"
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box2",
+    "xtype" : "xcp_column_box",
+    "title" : "${_UI_Page_bank_user_preferences_column_box2_title}",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox1",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 270,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "delegate_task",
+        "xtype" : "xcp_checkbox",
+        "fieldLabel" : "",
+        "boxLabel" : "${_UI_Page_bank_user_preferences_delegate_task_boxLabel}",
+        "name" : "xcp.data.model.UserPreferences@delegate_task",
+        "valueType" : "BOOLEAN"
+      }, {
+        "xcpId" : "column_box3",
+        "xtype" : "xcp_column_box",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "hidden",
+            "setterFunName" : "setHidden",
+            "etype" : "bank_user_preferences_column_box3_hidden_1",
+            "events" : ["delegate_task.change" ]
+          } ]
+        } ],
+        "items" : [ {
+          "xcpId" : "columnvbox2",
+          "xtype" : "xcp_columnvbox",
+          "orientation" : "Vertical",
+          "width" : "578",
+          "overflow_x" : "hidden",
+          "labelWidth" : 270,
+          "labelAlign" : "left",
+          "halign" : "left",
+          "valign" : "top",
+          "defaultMargins" : "0",
+          "items" : [ {
+            "xcpId" : "delegateToUser",
+            "xtype" : "xcp_dropdown_list",
+            "fieldLabel" : "${_UI_Page_bank_user_preferences_delegateToUser_fieldLabel}",
+            "valueField" : "user_group_name",
+            "displayField" : "user_group_name",
+            "store" : "userorgroup_selecti_staless_ds",
+            "valueType" : "STRING",
+            "name" : "xcp.data.model.UserPreferences@delegateToUser",
+            "plugins" : [ {
+              "ptype" : "xcp_expression_properties",
+              "expression" : [ {
+                "propertyId" : "disabled",
+                "setterFunName" : "setDisabled",
+                "etype" : "bank_user_preferences_delegateToUser_disabled_1",
+                "events" : ["delegate_task.change" ]
+              }, {
+                "propertyId" : "hidden",
+                "setterFunName" : "setHidden",
+                "etype" : "bank_user_preferences_delegateToUser_hidden_1",
+                "events" : ["delegate_task.change" ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "xcpId" : "workflowAutoNextTask",
+        "xtype" : "xcp_checkbox",
+        "fieldLabel" : "",
+        "boxLabel" : "${_UI_Page_bank_user_preferences_workflowAutoNextTask_boxLabel}",
+        "name" : "xcp.data.model.UserPreferences@workflowAutoNextTask",
+        "valueType" : "BOOLEAN"
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box4",
+    "xtype" : "xcp_column_box",
+    "title" : "${_UI_Page_bank_user_preferences_column_box4_title}",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox3",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "589",
+      "overflow_x" : "hidden",
+      "labelWidth" : 270,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "networkLocation",
+        "xtype" : "xcp_dropdown_list",
+        "fieldLabel" : "${_UI_Page_bank_user_preferences_networkLocation_fieldLabel}",
+        "valueField" : "location_id",
+        "displayField" : "location_name",
+        "store" : "networklocation_selecti_ds",
+        "valueType" : "STRING",
+        "name" : "xcp.data.model.UserPreferences@networkLocation"
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box5",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnhbox1",
+      "xtype" : "xcp_columnhbox",
+      "orientation" : "Horizontal",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 50,
+      "defaultMargins" : "5",
+      "labelAlign" : "left",
+      "halign" : "right",
+      "valign" : "top",
+      "items" : [ {
+        "xcpId" : "button",
+        "xtype" : "xcp_button",
+        "text" : "${_UI_Page_bank_user_preferences_button_text}",
+        "actionInstanceId" : "update_preferences_button"
+      }, {
+        "xcpId" : "cancel_goto_homepage",
+        "xtype" : "xcp_button",
+        "text" : "${_UI_Page_bank_user_preferences_cancel_goto_homepage_text}",
+        "action" : {
+          "redirectStyle" : "application",
+          "actionType" : "xcp_gotopage",
+          "redirectUrl" : "bank_user_preferences"
+        }
+      } ]
+    } ]
+  } ]
+}

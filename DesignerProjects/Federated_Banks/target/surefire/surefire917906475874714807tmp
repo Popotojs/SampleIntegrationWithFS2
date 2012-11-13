@@ -1,0 +1,9 @@
+#surefire
+#Tue Nov 13 11:32:02 CET 2012
+dataPolicy=MINIMAL
+configFileName=/configuration/bmcincmin1596412093_config.xml
+envId=1390600776
+user.dir=C\:\\Users\\ciminf\\Desktop\\Designer RC3 4783\\xCPDesigner\\Applications\\Federated_Banks\\Federated_Banks
+deploymentMethod=INCREMENTAL
+localRepository=C\:\\Users\\ciminf\\.m2\\repository
+basedir=C\:\\Users\\ciminf\\Desktop\\Designer RC3 4783\\xCPDesigner\\Applications\\Federated_Banks\\Federated_Banks

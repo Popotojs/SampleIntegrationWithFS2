@@ -1,0 +1,283 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_edit_base_content_title}",
+  "xtype" : "xcp_form",
+  "modelImmutable" : true,
+  "models" : [ "xcp_dm_document" ],
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "da_def_update_dm_document_button",
+      "defaultConfirmationPrompt" : "Are you sure you want to update the item?",
+      "showConfirmation" : true,
+      "redirectStyle" : "specified",
+      "showSuccessNotification" : true,
+      "actionType" : "update",
+      "redirectUrl" : "bank_view_base_content",
+      "redirectUrlModel" : "xcp_dm_document",
+      "actionModel" : "xcp_da_def_update_dm_document",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "object_name",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_edit_base_content_da_def_update_dm_document_object_name_1",
+          "events" : ["object_name.change" ]
+        }, {
+          "propertyId" : "id",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_edit_base_content_da_def_update_dm_document_id_1",
+          "events" : ["xcp_dm_document.change","xcp_dm_document.load" ]
+        } ],
+        "mapping" : {
+          "object_name" : ["object_name" ]
+        }
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnhbox",
+      "xtype" : "xcp_columnhbox",
+      "orientation" : "Horizontal",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 50,
+      "defaultMargins" : "5",
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top"
+    } ]
+  }, {
+    "xcpId" : "column_box1",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnhbox1",
+      "xtype" : "xcp_columnhbox",
+      "orientation" : "Horizontal",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 50,
+      "defaultMargins" : "5",
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "items" : [ {
+        "xcpId" : "r_lock_owner",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "",
+        "valueType" : "STRING",
+        "isRepeating" : false,
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "hidden",
+            "setterFunName" : "setHidden",
+            "etype" : "bank_edit_base_content_r_lock_owner_hidden_1",
+            "events" : ["xcp_dm_document.change","xcp_dm_document.load" ]
+          }, {
+            "propertyId" : "value",
+            "setterFunName" : "setValue",
+            "etype" : "bank_edit_base_content_r_lock_owner_value_1",
+            "events" : ["xcp_dm_document.change","xcp_dm_document.load" ]
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box2",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "33%",
+      "split" : true,
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "column_box3",
+        "xtype" : "xcp_column_box",
+        "title" : "${_UI_Page_bank_edit_base_content_column_box3_title}",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "items" : [ {
+          "xcpId" : "columnvbox2",
+          "xtype" : "xcp_columnvbox",
+          "orientation" : "Vertical",
+          "width" : "100%",
+          "split" : true,
+          "overflow_x" : "hidden",
+          "labelWidth" : 150,
+          "labelAlign" : "left",
+          "halign" : "left",
+          "valign" : "top",
+          "defaultMargins" : "5",
+          "items" : [ {
+            "xcpId" : "object_name",
+            "xtype" : "xcp_text_input",
+            "fieldLabel" : "${_UI_Page_bank_edit_base_content_object_name_fieldLabel}",
+            "hstretch" : true,
+            "valueType" : "STRING",
+            "name" : "xcp_dm_document@object_name"
+          }, {
+            "xcpId" : "r_modify_date",
+            "xtype" : "xcp_value_display",
+            "fieldLabel" : "${_UI_Page_bank_edit_base_content_r_modify_date_fieldLabel}",
+            "valueType" : "DATETIME",
+            "isRepeating" : false,
+            "format" : {
+              "xtype" : "xcp_datetime_formatter",
+              "dateFormat" : "short",
+              "timeFormat" : "short",
+              "dateStyle" : "datetime"
+            },
+            "name" : "xcp_dm_document@r_modify_date"
+          }, {
+            "xcpId" : "r_modifier",
+            "xtype" : "xcp_value_display",
+            "fieldLabel" : "${_UI_Page_bank_edit_base_content_r_modifier_fieldLabel}",
+            "valueType" : "STRING",
+            "isRepeating" : false,
+            "name" : "xcp_dm_document@r_modifier"
+          }, {
+            "xcpId" : "owner_name",
+            "xtype" : "xcp_value_display",
+            "fieldLabel" : "${_UI_Page_bank_edit_base_content_owner_name_fieldLabel}",
+            "valueType" : "STRING",
+            "isRepeating" : false,
+            "name" : "xcp_dm_document@owner_name"
+          }, {
+            "xcpId" : "r_creation_date",
+            "xtype" : "xcp_value_display",
+            "fieldLabel" : "${_UI_Page_bank_edit_base_content_r_creation_date_fieldLabel}",
+            "valueType" : "DATETIME",
+            "isRepeating" : false,
+            "format" : {
+              "xtype" : "xcp_datetime_formatter",
+              "dateFormat" : "short",
+              "timeFormat" : "short",
+              "dateStyle" : "datetime"
+            },
+            "name" : "xcp_dm_document@r_creation_date"
+          }, {
+            "xcpId" : "r_creator_name",
+            "xtype" : "xcp_value_display",
+            "fieldLabel" : "${_UI_Page_bank_edit_base_content_r_creator_name_fieldLabel}",
+            "valueType" : "STRING",
+            "isRepeating" : false,
+            "name" : "xcp_dm_document@r_creator_name"
+          }, {
+            "xcpId" : "column_box4",
+            "xtype" : "xcp_column_box",
+            "collapsible" : false,
+            "collapsed" : false,
+            "collapseFirst" : true,
+            "border" : false,
+            "defaultMargins" : "5",
+            "layout" : "xcp_columnbox",
+            "items" : [ {
+              "xcpId" : "columnhbox2",
+              "xtype" : "xcp_columnhbox",
+              "orientation" : "Horizontal",
+              "width" : "100%",
+              "overflow_x" : "hidden",
+              "labelWidth" : 50,
+              "defaultMargins" : "5",
+              "labelAlign" : "left",
+              "halign" : "right",
+              "valign" : "top",
+              "items" : [ {
+                "xcpId" : "button",
+                "xtype" : "xcp_button",
+                "text" : "${_UI_Page_bank_edit_base_content_button_text}",
+                "actionInstanceId" : "da_def_update_dm_document_button"
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "xcpId" : "columnvbox1",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "67%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "viewer",
+        "xtype" : "xcp_viewer",
+        "title" : "${_UI_Page_bank_edit_base_content_viewer_title}",
+        "docName" : false,
+        "height" : 500,
+        "prn" : true,
+        "thm" : true,
+        "ann" : true,
+        "man" : true,
+        "mdc" : true,
+        "hstretch" : true,
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "objectId",
+            "setterFunName" : "setObjectId",
+            "etype" : "bank_edit_base_content_viewer_objectId_1",
+            "events" : ["xcp_dm_document.change","xcp_dm_document.load" ]
+          }, {
+            "propertyId" : "contentType",
+            "setterFunName" : "setContentType",
+            "etype" : "bank_edit_base_content_viewer_contentType_1",
+            "events" : ["xcp_dm_document.change","xcp_dm_document.load" ]
+          } ]
+        } ]
+      }, {
+        "xcpId" : "comments",
+        "xtype" : "xcp_comments",
+        "showItemNameInTitle" : true,
+        "collapsible" : true,
+        "collapsed" : false,
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "objectId",
+            "setterFunName" : "setObjectId",
+            "etype" : "bank_edit_base_content_comments_objectId_1",
+            "events" : ["xcp_dm_document.change","xcp_dm_document.load" ]
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

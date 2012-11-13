@@ -1,0 +1,142 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_application_master_title}",
+  "xtype" : "xcp_form",
+  "items" : [ {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "cls" : "xcp-master-header",
+    "items" : [ {
+      "xcpId" : "columnhbox",
+      "xtype" : "xcp_columnhbox",
+      "orientation" : "Horizontal",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 50,
+      "defaultMargins" : "0",
+      "margins" : "0",
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "bottom",
+      "items" : [ {
+        "xcpId" : "image",
+        "xtype" : "xcp_image",
+        "imageSource" : "urn:fs2:com.emc.xcp.artifact.resource.image:Artifacts/Resources/fs2.png",
+        "internalURL" : "#application/fs2_status_page",
+        "behavior" : false,
+        "width" : 48,
+        "height" : 48,
+        "isInternal" : true
+      }, {
+        "xcpId" : "navigation_menu",
+        "xtype" : "xcp_navigation_menu",
+        "orientation" : "Horizontal",
+        "xcp_menu_onhover" : false,
+        "enableOverflow" : true,
+        "items" : [ {
+          "xcpId" : "nav_button",
+          "xtype" : "xcp_nav_button",
+          "text" : "${_UI_Page_bank_application_master_nav_button_text}",
+          "xcp_nav_type" : "page",
+          "xcp_link_type" : "application",
+          "xcp_nav_url" : "#application/bank_browse_content"
+        }, {
+          "xcpId" : "nav_button1",
+          "xtype" : "xcp_nav_button",
+          "text" : "${_UI_Page_bank_application_master_nav_button1_text}",
+          "xcp_nav_type" : "page",
+          "xcp_link_type" : "application",
+          "xcp_nav_url" : "#bank_bank/bank_create_bank"
+        }, {
+          "xcpId" : "nav_button2",
+          "xtype" : "xcp_nav_button",
+          "text" : "${_UI_Page_bank_application_master_nav_button2_text}",
+          "xcp_nav_type" : "page",
+          "xcp_link_type" : "none",
+          "menu" : {
+            "xcpId" : "menu",
+            "xtype" : "xcp_menu",
+            "items" : [ {
+              "xcpId" : "nav_menuitem4",
+              "xtype" : "xcp_nav_menuitem",
+              "text" : "${_UI_Page_bank_application_master_nav_menuitem4_text}",
+              "xcp_nav_url" : "#application/bank_search_for_banks_ft",
+              "xcp_nav_type" : "page",
+              "xcp_link_type" : "application"
+            }, {
+              "xcpId" : "nav_menuitem5",
+              "xtype" : "xcp_nav_menuitem",
+              "text" : "${_UI_Page_bank_application_master_nav_menuitem5_text}",
+              "xcp_nav_url" : "#application/bank_search_for_extern_1",
+              "xcp_nav_type" : "page",
+              "xcp_link_type" : "application"
+            }, {
+              "xcpId" : "menuseparator",
+              "xtype" : "xcp_menuseparator"
+            }, {
+              "xcpId" : "nav_menuitem",
+              "xtype" : "xcp_nav_menuitem",
+              "text" : "${_UI_Page_bank_application_master_nav_menuitem_text}",
+              "xcp_nav_url" : "#application/bank_search_for_banks",
+              "xcp_nav_type" : "page",
+              "xcp_link_type" : "application"
+            }, {
+              "xcpId" : "nav_menuitem1",
+              "xtype" : "xcp_nav_menuitem",
+              "text" : "${_UI_Page_bank_application_master_nav_menuitem1_text}",
+              "xcp_nav_url" : "#application/bank_search_for_bank_fol",
+              "xcp_nav_type" : "page",
+              "xcp_link_type" : "application"
+            }, {
+              "xcpId" : "nav_menuitem2",
+              "xtype" : "xcp_nav_menuitem",
+              "text" : "${_UI_Page_bank_application_master_nav_menuitem2_text}",
+              "xcp_nav_url" : "#application/bank_search_for_bank_rep",
+              "xcp_nav_type" : "page",
+              "xcp_link_type" : "application"
+            }, {
+              "xcpId" : "nav_menuitem3",
+              "xtype" : "xcp_nav_menuitem",
+              "text" : "${_UI_Page_bank_application_master_nav_menuitem3_text}",
+              "xcp_nav_url" : "#application/bank_search_for_external",
+              "xcp_nav_type" : "page",
+              "xcp_link_type" : "application"
+            }, {
+              "xcpId" : "menuseparator1",
+              "xtype" : "xcp_menuseparator"
+            }, {
+              "xcpId" : "nav_menuitem6",
+              "xtype" : "xcp_nav_menuitem",
+              "text" : "${_UI_Page_bank_application_master_nav_menuitem6_text}",
+              "xcp_nav_url" : "#application/bank_google_search",
+              "xcp_nav_type" : "page",
+              "xcp_link_type" : "application"
+            }, {
+              "xcpId" : "nav_menuitem7",
+              "xtype" : "xcp_nav_menuitem",
+              "text" : "${_UI_Page_bank_application_master_nav_menuitem7_text}",
+              "xcp_nav_url" : "#application/fs2_status_page",
+              "xcp_nav_type" : "page",
+              "xcp_link_type" : "application"
+            } ]
+          }
+        }, {
+          "xcpId" : "user_button",
+          "xtype" : "xcp_user_button"
+        } ]
+      } ]
+    } ]
+  }, {
+    "xcpId" : "page",
+    "xtype" : "xcp_page",
+    "cls" : "xcp-content-area",
+    "margin" : "10 10 10 10"
+  } ]
+}

@@ -1,0 +1,350 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_create_bank_title}",
+  "xtype" : "xcp_form",
+  "modelImmutable" : true,
+  "models" : [ "bank_bank_template" ],
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "da_def_create_bank_button",
+      "redirectStyle" : "current",
+      "showSuccessNotification" : true,
+      "showConfirmation" : false,
+      "actionType" : "create",
+      "actionModel" : "bank_da_def_create_bank",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "fdic_certificate",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_da_def_create_bank_fdic_certificate_1",
+          "events" : ["fdic_cert.change" ]
+        }, {
+          "propertyId" : "state",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_da_def_create_bank_state_1",
+          "events" : ["state.change" ]
+        }, {
+          "propertyId" : "rssd_id",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_da_def_create_bank_rssd_id_1",
+          "events" : ["rssd_id.change" ]
+        }, {
+          "propertyId" : "city",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_da_def_create_bank_city_1",
+          "events" : ["city.change" ]
+        }, {
+          "propertyId" : "object_name",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_da_def_create_bank_object_name_1",
+          "events" : ["name.change" ]
+        } ],
+        "mapping" : {
+          "fdic_certificate" : ["fdic_cert" ],
+          "state" : ["state" ],
+          "rssd_id" : ["rssd_id" ],
+          "city" : ["city" ],
+          "object_name" : ["name" ]
+        }
+      } ]
+    }, {
+      "xcpId" : "extract_attribute_initiate_staless_ds",
+      "actionModel" : "fs2_extract_attribute_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "attribute",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_extract_attribute_initiate_staless_ds_attribute_1"
+        }, {
+          "propertyId" : "inputvalue",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_extract_attribute_initiate_staless_ds_inputvalue_1",
+          "events" : ["name.change" ]
+        } ],
+        "mapping" : {
+          "inputvalue" : ["name" ]
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["name.change" ],
+      "outputType" : "Object"
+    }, {
+      "xcpId" : "extract_attribute_initiate_staless_ds_1",
+      "actionModel" : "fs2_extract_attribute_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "attribute",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_extract_attribute_initiate_staless_ds_1_attribute_1"
+        }, {
+          "propertyId" : "inputvalue",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_extract_attribute_initiate_staless_ds_1_inputvalue_1",
+          "events" : ["name.change" ]
+        } ],
+        "mapping" : {
+          "inputvalue" : ["name" ]
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["name.change" ],
+      "outputType" : "Object"
+    }, {
+      "xcpId" : "extract_attribute_initiate_staless_ds_2",
+      "actionModel" : "fs2_extract_attribute_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "attribute",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_extract_attribute_initiate_staless_ds_2_attribute_1"
+        }, {
+          "propertyId" : "inputvalue",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_extract_attribute_initiate_staless_ds_2_inputvalue_1",
+          "events" : ["name.change" ]
+        } ],
+        "mapping" : {
+          "inputvalue" : ["name" ]
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["name.change" ],
+      "outputType" : "Object"
+    }, {
+      "xcpId" : "extract_attribute_initiate_staless_ds_3",
+      "actionModel" : "fs2_extract_attribute_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "attribute",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_extract_attribute_initiate_staless_ds_3_attribute_1"
+        }, {
+          "propertyId" : "inputvalue",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_extract_attribute_initiate_staless_ds_3_inputvalue_1",
+          "events" : ["name.change" ]
+        } ],
+        "mapping" : {
+          "inputvalue" : ["name" ]
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["name.change" ],
+      "outputType" : "Object"
+    }, {
+      "xcpId" : "list_banks_in_state_initiate_staless_ds",
+      "actionModel" : "fs2_list_banks_in_state_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "state",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_create_bank_list_banks_in_state_initiate_staless_ds_state_1",
+          "events" : ["state_ddl.change" ]
+        } ],
+        "mapping" : {
+          "state" : ["state_ddl" ]
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["state_ddl.change" ]
+    } ]
+  }, {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "title" : "${_UI_Page_bank_create_bank_column_box_title}",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "image",
+        "xtype" : "xcp_image",
+        "imageSource" : "urn:bank:com.emc.xcp.artifact.resource.image:Artifacts/Resources/bank.png",
+        "behavior" : false,
+        "width" : 32,
+        "height" : 32,
+        "isInternal" : true
+      }, {
+        "xcpId" : "state_ddl",
+        "xtype" : "xcp_dropdown_list",
+        "fieldLabel" : "${_UI_Page_bank_create_bank_state_ddl_fieldLabel}",
+        "store" : "xcp.picklist.bank_states",
+        "valueType" : "STRING"
+      }, {
+        "xcpId" : "name",
+        "xtype" : "xcp_dropdown_list",
+        "fieldLabel" : "${_UI_Page_bank_create_bank_name_fieldLabel}",
+        "valueField" : "values",
+        "displayField" : "displays",
+        "store" : "list_banks_in_state_initiate_staless_ds",
+        "valueType" : "STRING",
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "disabled",
+            "setterFunName" : "setDisabled",
+            "etype" : "bank_create_bank_name_disabled_1",
+            "events" : ["state_ddl.change" ]
+          } ]
+        } ]
+      }, {
+        "xcpId" : "rssd_id",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_bank_create_bank_rssd_id_fieldLabel}",
+        "valueType" : "STRING",
+        "isRepeating" : false,
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "value",
+            "setterFunName" : "setValue",
+            "etype" : "bank_create_bank_rssd_id_value_1",
+            "events" : ["extract_attribute_initiate_staless_ds.change" ]
+          } ]
+        } ]
+      }, {
+        "xcpId" : "fdic_cert",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_bank_create_bank_fdic_cert_fieldLabel}",
+        "valueType" : "STRING",
+        "isRepeating" : false,
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "value",
+            "setterFunName" : "setValue",
+            "etype" : "bank_create_bank_fdic_cert_value_1",
+            "events" : ["extract_attribute_initiate_staless_ds_1.change" ]
+          } ]
+        } ]
+      }, {
+        "xcpId" : "city",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_bank_create_bank_city_fieldLabel}",
+        "valueType" : "STRING",
+        "isRepeating" : false,
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "value",
+            "setterFunName" : "setValue",
+            "etype" : "bank_create_bank_city_value_1",
+            "events" : ["extract_attribute_initiate_staless_ds_2.change" ]
+          } ]
+        } ]
+      }, {
+        "xcpId" : "state",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_bank_create_bank_state_fieldLabel}",
+        "valueType" : "xcp.picklist.bank_states",
+        "isRepeating" : false,
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "value",
+            "setterFunName" : "setValue",
+            "etype" : "bank_create_bank_state_value_1",
+            "events" : ["extract_attribute_initiate_staless_ds_3.change" ]
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box1",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnhbox",
+      "xtype" : "xcp_columnhbox",
+      "orientation" : "Horizontal",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 50,
+      "defaultMargins" : "5",
+      "labelAlign" : "left",
+      "halign" : "right",
+      "valign" : "top",
+      "items" : [ {
+        "xcpId" : "button",
+        "xtype" : "xcp_button",
+        "text" : "${_UI_Page_bank_create_bank_button_text}",
+        "actionInstanceId" : "da_def_create_bank_button",
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "disabled",
+            "setterFunName" : "setDisabled",
+            "etype" : "bank_create_bank_button_disabled_1",
+            "events" : ["name.change" ]
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box2",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox1",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "right",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "value_display",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "",
+        "valueType" : "HTML",
+        "isRepeating" : false,
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "value",
+            "setterFunName" : "setValue",
+            "etype" : "bank_create_bank_value_display_value_1"
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

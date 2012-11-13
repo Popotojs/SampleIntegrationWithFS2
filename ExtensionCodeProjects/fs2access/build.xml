@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="fs2access">
+	<property name="designer.content.path" value="C:/Users/ciminf/Desktop/RC3_APPS/FS2Services/content/modules"/>
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/deltaPack/3.7.2"/>
+    <property name="com.emc.ide.external.dfc.location" value="../../../P/CiminF_E/Int/int_XCPBLD_2.0/infra/plugins/com.emc.ide.external.dfc"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="Plug-in Dependencies.libraryclasspath">
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.core.runtime_3.7.0.v20110110.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.osgi_3.7.2.v20120110-1415.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.osgi.nl_de_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.osgi.nl_zh_TW_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.osgi.nl_ja_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/javax.transaction_1.1.1.v201105210645.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.osgi.nl_it_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.osgi.nl_es_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.osgi.nl_zh_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.osgi.nl_fr_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.equinox.common_3.6.0.v20110523.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.core.jobs_3.5.101.v20120113-1953.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.core.runtime.compatibility.registry_3.5.0.v20110505/runtime_registry_compatibility.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.equinox.registry_3.5.101.R37x_v20110810-1611.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.equinox.registry.nl_de_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.equinox.registry.nl_ja_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.equinox.registry.nl_zh_TW_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.equinox.registry.nl_zh_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.equinox.registry.nl_fr_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.equinox.registry.nl_es_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/languagePacks/0.9.1-Indigo/plugins/org.eclipse.equinox.registry.nl_it_3.7.0.v20111128043401.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.equinox.preferences_3.4.2.v20120111-2020.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.core.contenttype_3.4.100.v20110423-0524.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.equinox.app_1.3.100.v20110321.jar"/>
+        <pathelement location="../../../../com.emc.xcp.logger"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.core.resources_3.7.101.v20120125-1505.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.emf.ecore_2.7.0.v20120127-1122.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.eclipse.emf.common_2.7.0.v20120127-1122.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-antlr.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-apache-bcel.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-apache-bsf.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-apache-log4j.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-apache-oro.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-apache-regexp.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-apache-resolver.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-apache-xalan2.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-commons-logging.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-commons-net.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-jai.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-javamail.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-jdepend.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-jmf.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-jsch.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-junit.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-junit4.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-launcher.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-netrexx.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-swing.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant-testutil.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.ant_1.8.2.v20120109-1030/lib/ant.jar"/>
+        <pathelement location="../../../P/CiminF_E/Int/int_XCPBLD_2.0/setup/com.emc.xcp.releng/targetplatforms/eclipse.ee/3.7.2/plugins/org.apache.log4j_1.2.15.v201012070815.jar"/>
+        <pathelement location="../../../../com.emc.xcp.artifactmanager"/>
+    </path>
+    <path id="com.emc.ide.external.dfc.classpath">
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/ci.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/jms.jar"/>
+        <path refid="Plug-in Dependencies.libraryclasspath"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/bin"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/xmlconfigeditor.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/dfc.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/DDS.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/certj.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/cryptojFIPS.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/aspectjrt.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/workflow.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/subscription.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/bpmutil.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/DctmAdaptor.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/IDctmAdaptor.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/xmlschema.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/jaxb-api.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/jaxb-impl.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/bpm_infra.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/DctmForm.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/Dart.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/commons-logging-1.1.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/xercesImpl.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/configservice-impl.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/configservice-api.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/commons-lang-2.4.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/dmbasic"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/documentum.config"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/bpm-commons.jar"/>
+        <pathelement location="${com.emc.ide.external.dfc.location}/lib/castor-1.1-xml.jar"/>
+    </path>
+    <path id="fs2access.classpath">
+        <pathelement location="binapi"/>
+        <pathelement location="binimpl"/>
+        <path refid="com.emc.ide.external.dfc.classpath"/>
+    </path>
+	
+    <target name="init">
+        <mkdir dir="binapi"/>
+        <mkdir dir="binimpl"/>
+    </target>
+	
+    <target name="clean">
+        <delete dir="binapi"/>
+        <delete dir="binimpl"/>
+        <delete dir="out"/>
+    </target>
+	
+    <target depends="clean, build-project, build-jars, update-jars" name="build"/>
+	
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="binapi" source="${source}" target="${target}">
+            <src path="api"/>
+            <classpath refid="fs2access.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="binimpl" source="${source}" target="${target}">
+            <src path="src"/>
+        	<include name="com/documentum/fs2/xcp/impl/**/*.java"/>
+            <classpath refid="fs2access.classpath"/>
+        </javac>
+    </target>
+	
+	<target name="build-jars">
+		<jar destfile="out/fs2api.jar" basedir="binapi">
+		</jar>
+		<jar destfile="out/fs2api-impl.jar" basedir="binimpl">
+		</jar>
+	</target>
+	
+	<target name="update-jars">
+		<copy file="out/fs2api.jar" todir="${designer.content.path}" />
+		<copy file="out/fs2api-impl.jar" todir="${designer.content.path}" />
+	</target>
+</project>

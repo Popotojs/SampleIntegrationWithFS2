@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2010-2011. EMC Corporation.  All Rights Reserved.
+  -->
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    
+	<global-method-security pre-post-annotations="enabled"/>
+
+	<!-- HTTP security configurations -->
+    <http use-expressions="true" realm="xCP" entry-point-ref="xcpAuthenticationEntryPoint">
+        <http-basic/>
+        <!-- Configure these elements to secure URIs in your application -->
+        <intercept-url pattern="/component/xcp-core/xcp_signin/contents-*" access="permitAll" />
+        <intercept-url pattern="/component/xcp-core/xcp_theme_lib/contents-*" access="permitAll" />
+        <intercept-url pattern="/ui/pages/application/signin" access="permitAll" />
+        <intercept-url pattern="/*/*/ui/pages/application/signin" access="permitAll" />
+        <intercept-url pattern="/signin.jsp*" access="permitAll" />
+        <intercept-url pattern="/*/js/**" access="permitAll" />
+        <intercept-url pattern="/*/*/js/**" access="permitAll" />
+        <intercept-url pattern="/icons/**" access="permitAll" />
+        <intercept-url pattern="/Artifacts/Resources/**" access="permitAll" />
+        <intercept-url pattern="/Artifacts/*/Resources/**" access="permitAll" />
+        <intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+
+        <form-login authentication-failure-handler-ref="authenticationFailureHandler"
+            authentication-success-handler-ref="savedRequestAwareAuthenticationSuccessHandler" />
+
+        <logout invalidate-session="true" logout-success-url="/signin.jsp" logout-url=""/>
+    </http>
+
+    <beans:bean id="savedRequestAwareAuthenticationSuccessHandler"
+          class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+        <beans:property name="targetUrlParameter" value="spring-security-redirect"/>
+    </beans:bean>
+    
+    <beans:bean id="xcpAuthenticationEntryPoint" class ="com.emc.xcp.security.FormLoginAuthenticationEntryPoint">
+        <beans:property name="loginFormUrl" value="/signin.jsp"/>
+    </beans:bean>
+    
+    <beans:bean class="com.emc.xcp.services.security.ApplicationRoleCheck"/>
+    
+    <beans:bean id="authenticationFailureHandler" class="org.springframework.security.web.authentication.ExceptionMappingAuthenticationFailureHandler">
+        <beans:property name="defaultFailureUrl" value="/signin.jsp?auth-error"/>
+        <beans:property name="exceptionMappings">
+            <beans:map>
+                <beans:entry key="com.emc.xcp.services.security.UserRoleConfigurationException" value="/signin.jsp?role-error"/>
+            </beans:map>
+        </beans:property>
+    </beans:bean>
+
+	<!-- Configure Documentum Provider -->
+    <authentication-manager alias="authenticationManager">
+    	<authentication-provider ref="documentumAuthenticationProvider"/>
+	</authentication-manager>
+
+	<beans:bean id="documentumAuthenticationProvider" class ="com.emc.xcp.security.DocumentumAuthenticationProvider">
+		<beans:property name="repository" value="#{deployment['dfc.globalregistry.repository']}"/>
+	</beans:bean>
+
+</beans:beans>

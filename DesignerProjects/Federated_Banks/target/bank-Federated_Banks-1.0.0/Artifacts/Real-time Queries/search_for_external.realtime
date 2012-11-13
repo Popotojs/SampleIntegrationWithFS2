@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<realtime:RealTimeSearch xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsDatatypes="http://xcp.emc.com/datatypes" xmlns:realtime="http://xcp.emc.com/search/realtime" urn="urn:bank:com.emc.xcp.artifact.search.realtime:Artifacts/Real-time Queries/search_for_external.realtime" categoryId="com.emc.xcp.artifact.search.realtime" name="search_for_external" label="Search For External Content">
+  <datasource categoryId="com.emc.xcp.artifact.dataservice.datasourcecontract" name="search_for_external" label="Search For External Content" implCategoryId="com.emc.xcp.artifact.search.realtime">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="input_name" label="Name">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="input_source" label="Source">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <outputs xsi:type="nsDataserviceContract:AttributeElement" name="Result Count">
+      <attributeType xsi:type="nsAttributeDatatypes:IntegerType"/>
+    </outputs>
+    <outputs xsi:type="nsDataserviceContract:ArrayElement" name="Results">
+      <item xsi:type="nsDataserviceContract:StructureElement" name="Items">
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="id" label="Object ID">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="object_name" label="Name">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="source" label="Source">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="r_lock_owner" label="Locked by" sortable="true" hidden="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="r_object_type" label="Object type" sortable="true" hidden="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+      </item>
+    </outputs>
+    <primaryElement>
+      <dataModel href="urn:bank:com.emc.xcp.artifact.doc:Artifacts/Content/external_content.content#/"/>
+    </primaryElement>
+  </datasource>
+  <inputParameters label="Name" name="name">
+    <formInputs xsi:type="realtime:RealTimeStringFormInput" operator="com.emc.xcp.model.common.StringOperator:CONTAIN">
+      <contextSelection>
+        <parentRef>
+          <dataRef href="urn:bank:com.emc.xcp.artifact.doc:Artifacts/Content/external_content.content#/"/>
+        </parentRef>
+        <dataRef href="urn:xcp:com.emc.xcp.artifact.basetype:Artifacts/Base Type/basetype.basetype#//@attributes[name='object_name']"/>
+      </contextSelection>
+    </formInputs>
+  </inputParameters>
+  <inputParameters label="Source" name="source">
+    <formInputs xsi:type="realtime:RealTimeStringFormInput" operator="com.emc.xcp.model.common.StringOperator:CONTAIN">
+      <contextSelection>
+        <parentRef>
+          <dataRef href="urn:bank:com.emc.xcp.artifact.doc:Artifacts/Content/external_content.content#/"/>
+        </parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.doc:Artifacts/Content/external_content.content#//@attributes[name='source']"/>
+      </contextSelection>
+    </formInputs>
+  </inputParameters>
+  <columns label="Object ID">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.doc:Artifacts/Content/external_content.content#/"/>
+      </parentRef>
+      <dataRef href="urn:xcp:com.emc.xcp.artifact.basetype:Artifacts/Base Type/basetype.basetype#//@attributes[name='r_object_id']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Name">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.doc:Artifacts/Content/external_content.content#/"/>
+      </parentRef>
+      <dataRef href="urn:xcp:com.emc.xcp.artifact.basetype:Artifacts/Base Type/basetype.basetype#//@attributes[name='object_name']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Source">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.doc:Artifacts/Content/external_content.content#/"/>
+      </parentRef>
+      <dataRef href="urn:bank:com.emc.xcp.artifact.doc:Artifacts/Content/external_content.content#//@attributes[name='source']"/>
+    </contextSelection>
+  </columns>
+  <defaultSort ascending="true"/>
+  <dataType xsi:type="nsDatatypes:Document" href="urn:bank:com.emc.xcp.artifact.doc:Artifacts/Content/external_content.content#/"/>
+  <resultOrientation>
+    <dataRef href="urn:bank:com.emc.xcp.artifact.doc:Artifacts/Content/external_content.content#/"/>
+  </resultOrientation>
+</realtime:RealTimeSearch>

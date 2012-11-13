@@ -1,0 +1,16 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_browse_content_title}",
+  "xtype" : "xcp_form",
+  "items" : [ {
+    "xcpId" : "content_tree",
+    "xtype" : "xcp_content_tree",
+    "title" : "${_UI_Page_bank_browse_content_content_tree_title}",
+    "showRootFiles" : true,
+    "navigateOnItemClick" : true,
+    "showContextMenu" : true,
+    "showOnlyFolders" : false,
+    "depth" : 100
+  } ]
+}

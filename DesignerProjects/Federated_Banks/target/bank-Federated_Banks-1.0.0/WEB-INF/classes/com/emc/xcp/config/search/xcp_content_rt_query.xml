@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean class="com.emc.xcp.services.datasource.domain.RealTimeQuery" id="xcp_content_rt_query">
+  <property name="columns">
+    <list>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="object_name"/>
+        <property name="sortable" value="true"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="a_content_type"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="r_modify_date"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="r_modifier"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="r_lock_date"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="r_lock_owner"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="r_version_label"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="id"/>
+        <property name="sortable" value="false"/>
+      </bean>
+      <bean class="com.emc.xcp.services.datasource.domain.Column">
+        <property name="property" value="r_object_type"/>
+        <property name="sortable" value="false"/>
+      </bean>
+    </list>
+  </property>
+  <property name="expressionSet">
+    <bean class="com.emc.xcp.services.datasource.domain.expression.ExpressionSet">
+      <property name="expressions">
+        <list>
+          <bean class="com.emc.xcp.services.datasource.domain.expression.SimpleValueExpression">
+            <property name="caseSensitive" value="true"/>
+            <property name="exactMatch" value="false"/>
+            <property name="fuzzy" value="false"/>
+            <property name="property" value="object_name"/>
+            <property name="repeated" value="false"/>
+            <property name="value" value="urlparam{input_name}"/>
+            <property name="dataType" value="STRING"/>
+            <property name="operator" value="EQUAL"/>
+          </bean>
+          <bean class="com.emc.xcp.services.datasource.domain.expression.SimpleValueExpression">
+            <property name="caseSensitive" value="true"/>
+            <property name="exactMatch" value="false"/>
+            <property name="fuzzy" value="false"/>
+            <property name="property" value="a_content_type"/>
+            <property name="repeated" value="false"/>
+            <property name="value" value="urlparam{input_contenttype}"/>
+            <property name="dataType" value="STRING"/>
+            <property name="operator" value="EQUAL"/>
+          </bean>
+        </list>
+      </property>
+      <property name="operator" value="AND"/>
+    </bean>
+  </property>
+  <property name="mapping" ref="xcp_content_rt_querymapping"/>
+  <property name="sorts">
+    <list>
+      <bean class="com.emc.xcp.services.datasource.domain.Sort">
+        <property name="ascending" value="true"/>
+        <property name="property" value="object_name"/>
+      </bean>
+    </list>
+  </property>
+</bean>
+
+<bean class="com.emc.xcp.services.datasource.domain.mapping.RealTimeMapping" id="xcp_content_rt_querymapping">
+  <property name="rootType">
+    <bean class="com.emc.xcp.services.datasource.domain.mapping.ObjectType">
+      <property name="typeName" value="dm_document"/>
+      <property name="attributes">
+        <map>
+          <entry key="a_content_type">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="a_content_type"/>
+            </bean>
+          </entry>
+          <entry key="id">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="r_object_id"/>
+            </bean>
+          </entry>
+          <entry key="object_name">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="object_name"/>
+            </bean>
+          </entry>
+          <entry key="r_lock_date">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="r_lock_date"/>
+            </bean>
+          </entry>
+          <entry key="r_lock_owner">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="r_lock_owner"/>
+            </bean>
+          </entry>
+          <entry key="r_modifier">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="r_modifier"/>
+            </bean>
+          </entry>
+          <entry key="r_modify_date">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="r_modify_date"/>
+            </bean>
+          </entry>
+          <entry key="r_object_type">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="r_object_type"/>
+            </bean>
+          </entry>
+          <entry key="r_version_label">
+            <bean class="com.emc.xcp.services.datasource.domain.mapping.DocbaseAttribute">
+              <property name="persistentName" value="r_version_label"/>
+            </bean>
+          </entry>
+        </map>
+      </property>
+    </bean>
+  </property>
+</bean>
+
+</beans>

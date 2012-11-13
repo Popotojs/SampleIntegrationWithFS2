@@ -1,0 +1,95 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for fs2:FS2Services:jar:1.0.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 145, column 11
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building FS2Services 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ FS2Services ---
+[INFO] Deleting C:\Users\ciminf\Desktop\RC3_APPS\FS2Services\target
+[INFO] 
+[INFO] --- xcp-validate:1.0.4:run (xcp-validate) @ FS2Services ---
+[WARNING] Task page for the activity "Initiate" in process "Search External Source" does not exist.
+[WARNING] Task page for the activity "Initiate" in process "List query attributes" does not exist.
+[WARNING] Task page for the activity "Initiate" in process "Google Search" does not exist.
+[WARNING] Task page for the activity "Initiate" in process "List banks in state FFIEC" does not exist.
+[WARNING] Task page for the activity "Initiate" in process "Extract Attribute" does not exist.
+[WARNING] Task page for the activity "Initiate" in process "List result attributes" does not exist.
+[WARNING] Task page for the activity "Initiate" in process "Get Source Description" does not exist.
+[WARNING] Task page for the activity "Initiate" in process "List External Sources" does not exist.
+[WARNING] Widget query: Property "Initial value" is empty.
+[WARNING] Widget query_attr: Property "Initial value" is empty.
+[WARNING] Widget source: Property "Initial value" is empty.
+[WARNING] Widget result_attr: Property "Initial value" is empty.
+[WARNING] Data service instance List External Sources is not being used.
+[WARNING] Data service instance List query attributes is not being used.
+[WARNING] Data service instance List result attributes is not being used.
+[WARNING] Data service instance Get Source Description is not being used.
+[WARNING] Task page for the activity "Initiate" in process "List banks FFIEC" does not exist.
+[INFO] Finished validating project 'FS2Services' in 469ms
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-source) @ FS2Services ---
+[INFO] Source directory: C:\Users\ciminf\Desktop\RC3_APPS\FS2Services\gen\main\java added.
+[INFO] 
+[INFO] --- xcp-generate-sources:1.0.4:run (default) @ FS2Services ---
+[INFO] Finished executing project generators in....42ms
+[INFO] Finished generating code for project 'FS2Services' in 43ms
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-resource (add-resource) @ FS2Services ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ FS2Services ---
+[WARNING] Using platform encoding (UTF8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 32 resources to /Artifacts
+[INFO] Copying 1 resource
+[INFO] Copying 4 resources to /content
+[INFO] Copying 0 resource
+[INFO] Copying 0 resource
+[INFO] Copying 0 resource to /lib
+[INFO] Copying 0 resource
+[INFO] Copying 0 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ FS2Services ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:testResources (default-testResources) @ FS2Services ---
+[WARNING] Using platform encoding (UTF8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\ciminf\Desktop\RC3_APPS\FS2Services\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ FS2Services ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.7.1:test (default-test) @ FS2Services ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: C:\Users\ciminf\Desktop\RC3_APPS\FS2Services\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+There are no tests to run.
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.1:jar (default-jar) @ FS2Services ---
+[INFO] Building jar: C:\Users\ciminf\Desktop\RC3_APPS\FS2Services\target\fs2.FS2Services-1.0.0.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ FS2Services ---
+[INFO] Installing C:\Users\ciminf\Desktop\RC3_APPS\FS2Services\target\fs2.FS2Services-1.0.0.jar to C:\Users\ciminf\.m2\repository\fs2\FS2Services\1.0.0\FS2Services-1.0.0.jar
+[INFO] Installing C:\Users\ciminf\Desktop\RC3_APPS\FS2Services\pom.xml to C:\Users\ciminf\.m2\repository\fs2\FS2Services\1.0.0\FS2Services-1.0.0.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.950s
+[INFO] Finished at: Fri Nov 09 16:27:03 CET 2012
+[INFO] Final Memory: 9M/24M
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uitemplate:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uitemplate="http://www.emc.com/xcp2/2010/uitemplate" urn="urn:bank:com.emc.xcp.artifact.page:Artifacts/Pages/browse_content.page" categoryId="com.emc.xcp.artifact.page" name="browse_content" label="Browse Content" templateType="application">
+  <title exprStr="Browse Content"/>
+  <rootContainer widgetEntry="//@widgetMap[key='root']">
+    <properties name="xcpId" value="root" entry="//@rootContainer/@propertyMap.0"/>
+    <propertyMap key="xcpId" value="//@rootContainer/@properties.0"/>
+    <children componentDefinitionId="xcp_content_tree" parent="//@rootContainer" widgetEntry="//@widgetMap[key='content_tree']">
+      <properties name="title" value="Browse Content" entry="//@rootContainer/@children.0/@propertyMap.0"/>
+      <properties name="tooltip" value="" entry="//@rootContainer/@children.0/@propertyMap.1"/>
+      <properties name="root" entry="//@rootContainer/@children.0/@propertyMap.2"/>
+      <properties name="showRootFiles" value="true" type="BOOLEAN" entry="//@rootContainer/@children.0/@propertyMap.3"/>
+      <properties name="navigateOnItemClick" value="true" type="BOOLEAN" entry="//@rootContainer/@children.0/@propertyMap.4"/>
+      <properties name="showContextMenu" value="true" type="BOOLEAN" entry="//@rootContainer/@children.0/@propertyMap.5"/>
+      <properties name="showOnlyFolders" value="false" type="BOOLEAN" entry="//@rootContainer/@children.0/@propertyMap.6"/>
+      <properties name="height" value="" type="INTEGER" entry="//@rootContainer/@children.0/@propertyMap.7"/>
+      <properties name="depth" value="100" type="INTEGER" entry="//@rootContainer/@children.0/@propertyMap.8"/>
+      <properties name="folderRoot" value="" entry="//@rootContainer/@children.0/@propertyMap.9"/>
+      <properties name="xcpId" value="content_tree" entry="//@rootContainer/@children.0/@propertyMap.10"/>
+      <propertyMap key="title" value="//@rootContainer/@children.0/@properties.0"/>
+      <propertyMap key="tooltip" value="//@rootContainer/@children.0/@properties.1"/>
+      <propertyMap key="root" value="//@rootContainer/@children.0/@properties.2"/>
+      <propertyMap key="showRootFiles" value="//@rootContainer/@children.0/@properties.3"/>
+      <propertyMap key="navigateOnItemClick" value="//@rootContainer/@children.0/@properties.4"/>
+      <propertyMap key="showContextMenu" value="//@rootContainer/@children.0/@properties.5"/>
+      <propertyMap key="showOnlyFolders" value="//@rootContainer/@children.0/@properties.6"/>
+      <propertyMap key="height" value="//@rootContainer/@children.0/@properties.7"/>
+      <propertyMap key="depth" value="//@rootContainer/@children.0/@properties.8"/>
+      <propertyMap key="folderRoot" value="//@rootContainer/@children.0/@properties.9"/>
+      <propertyMap key="xcpId" value="//@rootContainer/@children.0/@properties.10"/>
+    </children>
+  </rootContainer>
+  <widgetMap key="root" value="//@rootContainer"/>
+  <widgetMap key="content_tree" value="//@rootContainer/@children.0"/>
+</uitemplate:Page>

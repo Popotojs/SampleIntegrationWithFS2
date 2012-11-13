@@ -1,0 +1,44 @@
+{
+  "padding" : "10 10 5 10",
+  "border" : false,
+  "xtype" : "xcp_form",
+  "models" : [ "bank_external_content_import_external_con_model" ],
+  "loadModel" : false,
+  "items" : [ {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "source",
+        "xtype" : "xcp_text_input",
+        "fieldLabel" : "${_UI_UIStep_bank_import_external_con_source_fieldLabel}",
+        "hstretch" : true,
+        "valueType" : "STRING",
+        "name" : "source"
+      }, {
+        "xcpId" : "object_name",
+        "xtype" : "xcp_text_input",
+        "fieldLabel" : "${_UI_UIStep_bank_import_external_con_object_name_fieldLabel}",
+        "hstretch" : true,
+        "valueType" : "STRING",
+        "name" : "object_name"
+      } ]
+    } ]
+  } ]
+}

@@ -1,0 +1,177 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for bank:Federated_Banks:war:1.0.0
+[WARNING] 'dependencies.dependency.systemPath' for fs2:FS2Services:jar should not point at files within the project directory, ${project.basedir}\lib\fs2.FS2Services-1.0.0.jar will be unresolvable by dependent projects @ line 1528, column 19
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Federated Banks 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ Federated_Banks ---
+[INFO] Deleting C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target
+[INFO] 
+[INFO] --- xcp-validate:1.0.4:run (xcp-validate) @ Federated_Banks ---
+[WARNING] Widget text_input: Property "Initial value" is empty.
+[WARNING] Widget name: Property "Initial value" is empty.
+[WARNING] Widget state_ddl: Property "Initial value" is empty.
+[WARNING] Data service instance Extract RSSD ID is not being used.
+[WARNING] Data service instance Extract FDIC Cert is not being used.
+[WARNING] Data service instance Extract City is not being used.
+[WARNING] Data service instance Extract State is not being used.
+[WARNING] Data service instance List banks in state FFIEC is not being used.
+[WARNING] The use of attribute name 'state' is not recommended, it is a reserved word.
+[WARNING] Widget text_input: Property "Initial value" is empty.
+[WARNING] Task page for the activity "Initiate" in process "Create Bank Process" does not exist.
+[WARNING] Widget text_input: Property "Initial value" is empty.
+[WARNING] Widget text_input1: Property "Initial value" is empty.
+[WARNING] Widget text_input2: Property "Initial value" is empty.
+[WARNING] Widget text_input3: Property "Initial value" is empty.
+[WARNING] Widget text_input: Property "Initial value" is empty.
+[WARNING] Widget text_input1: Property "Initial value" is empty.
+[WARNING] Widget text_input2: Property "Initial value" is empty.
+[WARNING] Widget text_input: Property "Initial value" is empty.
+[WARNING] Widget text_input: Property "Initial value" is empty.
+[WARNING] Widget text_input1: Property "Initial value" is empty.
+[WARNING] Widget text_input2: Property "Initial value" is empty.
+[WARNING] Widget text_input: Property "Initial value" is empty.
+[WARNING] Widget text_input: Property "Initial value" is empty.
+[WARNING] Widget text_input1: Property "Initial value" is empty.
+[WARNING] Widget content_tree: Property "Folder Root" is empty.
+[INFO] Finished validating project 'Federated_Banks' in 1028ms
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-source) @ Federated_Banks ---
+[INFO] Source directory: C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\gen\main\java added.
+[INFO] 
+[INFO] --- xcp-generate-sources:1.0.4:run (xcp-generate-sources) @ Federated_Banks ---
+[WARNING] Maven resolved the library [org.apache.maven.surefire:surefire-providers:2.7.1]to C:\Users\ciminf\.m2\repository\org\apache\maven\surefire\surefire-providers\2.7.1\surefire-providers-2.7.1.pom
+[INFO] Finished executing project generators in....47ms
+[INFO] Generating Action flow config for action flow : import_bank_report
+[INFO] Generating Action flow config for action flow : import_external_con
+[INFO] Generating Action flow config for action flow : base_folder
+[INFO] Finished executing artifact generators in....3313ms
+[INFO] Finished generating code for project 'Federated_Banks' in 3362ms
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-resource (add-resource) @ Federated_Banks ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ Federated_Banks ---
+[WARNING] Using platform encoding (UTF8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] Copying 15 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ Federated_Banks ---
+[WARNING] File encoding has not been set, using platform encoding UTF8, i.e. build is platform dependent!
+[INFO] Compiling 169 source files to C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:testResources (default-testResources) @ Federated_Banks ---
+[WARNING] Using platform encoding (UTF8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ Federated_Banks ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.7.1:test (default-test) @ Federated_Banks ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+There are no tests to run.
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- xcp-dar:1.0.6:run (xcp-dar) @ Federated_Banks ---
+[INFO] 
+[INFO] Started create dar package for project 'Federated_Banks'
+[INFO] Artifact 'Artifacts/Resources/search_fs2.gif' added to the package
+[INFO] Artifact 'Artifacts/Pages/google_search_no_su.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/user_preferences.page' added to the package
+[INFO] Artifact 'Artifacts/Context Menus/bank_folder.contextmenu' added to the package
+[INFO] Artifact 'Artifacts/Full-text Queries/search_for_banks_ft.fulltext' added to the package
+[INFO] Artifact 'Artifacts/Full-text Queries/search_for_extern_1.fulltext' added to the package
+[INFO] Artifact 'Artifacts/Pages/search_for_bank_fol.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/application_master.page' added to the package
+[INFO] Artifact 'Artifacts/Real-time Queries/search_for_banks.realtime' added to the package
+[INFO] Artifact 'Artifacts/Business Objects/bank.businessobj' added to the package
+[INFO] Artifact 'Artifacts/Folders/bank_folder.folder' added to the package
+[INFO] Artifact 'Artifacts/Action Flows/import_external_con.actionflow' added to the package
+[INFO] Artifact 'Artifacts/Pages/view_bank.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/view_external_conte.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/role_member.page' added to the package
+[INFO] Artifact 'Artifacts/UI Steps/import_external_con.uistep' added to the package
+[INFO] Artifact 'Artifacts/Pages/search_for_extern_1.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/create_bank.page' added to the package
+[INFO] Artifact 'Artifacts/UI Steps/import_bank_report_.uistep' added to the package
+[INFO] Artifact 'Artifacts/Content/bank_report.content' added to the package
+[INFO] Artifact 'Artifacts/Pages/page_not_found.page' added to the package
+[INFO] Artifact 'Artifacts/Context Menus/external_content.contextmenu' added to the package
+[INFO] Artifact 'Artifacts/Pages/view_base_folder.page' added to the package
+[INFO] Artifact 'Artifacts/Context Menus/bank_report.contextmenu' added to the package
+[INFO] Artifact 'Artifacts/Pages/search_for_banks_ft.page' added to the package
+[INFO] Artifact 'Artifacts/Resources/bank.png' added to the package
+[INFO] Artifact 'Artifacts/Pages/edit_base_folder.page' added to the package
+[INFO] Artifact 'Artifacts/Real-time Queries/search_for_external.realtime' added to the package
+[INFO] Artifact 'Artifacts/Viewer Formats/viewerformatmapping.viewerformat' added to the package
+[INFO] Artifact 'Artifacts/Pages/browse_content.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/manage_app_role.page' added to the package
+[INFO] Artifact 'Artifacts/Action Flows/base_folder.actionflow' added to the package
+[INFO] Artifact 'Artifacts/Runtime App Configurations/runtimeappconfig.rtappconfig' added to the package
+[INFO] Artifact 'Artifacts/Pages/view_base_content.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/application_parameter.page' added to the package
+[INFO] Artifact 'Artifacts/Picklists/states.picklist' added to the package
+[INFO] Artifact 'Artifacts/UI Steps/base_folder_step_1.uistep' added to the package
+[INFO] Artifact 'Artifacts/Context Menus/dm_document.contextmenu' added to the package
+[INFO] Artifact 'Artifacts/Pages/search_for_bank_rep.page' added to the package
+[INFO] Artifact 'Artifacts/Real-time Queries/search_for_bank_fol.realtime' added to the package
+[INFO] Artifact 'Artifacts/Real-time Queries/search_for_bank_rep.realtime' added to the package
+[INFO] Artifact 'Artifacts/Pages/view_bank_folder.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/edit_base_content.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/appmaster_defpage.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/search_for_external.page' added to the package
+[INFO] Artifact 'Artifacts/Resources/bank2.png' added to the package
+[INFO] Artifact 'Artifacts/Context Menus/dm_folder.contextmenu' added to the package
+[INFO] Artifact 'Artifacts/Pages/google_search.page' added to the package
+[INFO] Artifact 'Artifacts/Processes/create_bank_process.process' added to the package
+[INFO] Artifact 'Artifacts/Context Menus/bank.contextmenu' added to the package
+[INFO] Artifact 'Artifacts/Pages/search_for_banks.page' added to the package
+[INFO] Artifact 'Artifacts/Pages/view_bank_report.page' added to the package
+[INFO] Artifact 'Artifacts/Content/external_content.content' added to the package
+[INFO] Artifact 'Artifacts/Action Flows/import_bank_report.actionflow' added to the package
+[INFO] Added manifest file to package
+[INFO] Added index file to package
+[INFO] Finished creating dar package for project 'Federated_Banks'
+[INFO] Dar creation for project 'Federated_Banks' took 184ms
+[INFO] 
+[INFO] Started packaging local library dependencies for application project '[XCPProject: Federated_Banks]'
+[INFO] Adding [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\bank-Federated_Banks-1.0.0\WEB-INF\lib\fs2.FS2Services-1.0.0.jar] -> [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\bank-Federated_Banks-1.0.0\WEB-INF\lib]
+[INFO] Packaged local library dependencies for project 'Federated_Banks' in 47ms
+[INFO] 
+[INFO] --- maven-war-plugin:2.1.1:war (default-war) @ Federated_Banks ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [Federated_Banks] in [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\bank-Federated_Banks-1.0.0]
+[INFO] Processing war project
+[INFO] Copying webapp webResources [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\Artifacts] to [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\bank-Federated_Banks-1.0.0]
+[INFO] Copying webapp webResources [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\content] to [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\bank-Federated_Banks-1.0.0]
+[INFO] Copying webapp webResources [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\lib] to [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\bank-Federated_Banks-1.0.0]
+[INFO] Copying webapp webResources [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\gen/main/webapp] to [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\bank-Federated_Banks-1.0.0]
+[INFO] Copying webapp webResources [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\.] to [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\bank-Federated_Banks-1.0.0]
+[INFO] Copying webapp resources [C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\src\main\webapp]
+[INFO] Webapp assembled in [7544 msecs]
+[INFO] Building war: C:\Users\ciminf\Desktop\Designer RC3 4783\xCPDesigner\Applications\Federated_Banks\Federated_Banks\target\bank-Federated_Banks-1.0.0.war
+[WARNING] Warning: selected war files include a WEB-INF/web.xml which will be ignored 
+(webxml attribute is missing from war task, or ignoreWebxml attribute is specified as 'true')
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 25.690s
+[INFO] Finished at: Tue Nov 13 11:31:43 CET 2012
+[INFO] Final Memory: 21M/55M
+[INFO] ------------------------------------------------------------------------

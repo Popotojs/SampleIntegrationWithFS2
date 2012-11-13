@@ -1,0 +1,18 @@
+{
+bank_search_for_banks_ft:{
+facet_state:{
+label: "${_UI_Facet_bank_search_for_banks_ft_facet_state_facet_state}"
+}
+,
+facet_city:{
+label: "${_UI_Facet_bank_search_for_banks_ft_facet_city_facet_city}"
+}
+
+},
+bank_search_for_extern_1:{
+facet_source:{
+label: "${_UI_Facet_bank_search_for_extern_1_facet_source_facet_source}"
+}
+
+}
+}

@@ -1,0 +1,38 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_manage_app_role_title}",
+  "xtype" : "xcp_form",
+  "items" : [ {
+    "xcpId" : "rich_text",
+    "xtype" : "xcp_rich_text",
+    "html" : "${_UI_Page_bank_manage_app_role_rich_text_html}"
+  }, {
+    "xcpId" : "results_list",
+    "xtype" : "xcp_results_list",
+    "typeName" : "role",
+    "modelName" : "roles",
+    "storeId" : "rolesStore",
+    "pageSize" : 10,
+    "selectionModel" : false,
+    "columns" : [ {
+      "xcpId" : "results_list_page_link_column",
+      "xtype" : "xcp_results_list_page_link_column",
+      "text" : "${_UI_Page_bank_manage_app_role_results_list_page_link_column_text}",
+      "width" : 150,
+      "dataIndex" : "name",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_Page_bank_manage_app_role_results_list_column_text}",
+      "dataIndex" : "description",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    } ]
+  } ]
+}

@@ -1,0 +1,63 @@
+{
+  "padding" : "10 10 5 10",
+  "border" : false,
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "activity_list_initiate_staless_ds_1",
+      "actionModel" : "xcp_activity_list_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "id",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_signoff_reject_one_activity_list_initiate_staless_ds_1_id_1"
+        }, {
+          "propertyId" : "port_type",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_signoff_reject_one_activity_list_initiate_staless_ds_1_port_type_1"
+        } ],
+        "mapping" : {
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : true
+    } ]
+  }, {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "path",
+        "xtype" : "xcp_dropdown_list",
+        "fieldLabel" : "${_UI_UIStep_xcp_signoff_reject_one_path_fieldLabel}",
+        "valueField" : "output_activity_names",
+        "displayField" : "output_activity_names",
+        "store" : "activity_list_initiate_staless_ds_1",
+        "valueType" : "STRING"
+      }, {
+        "xcpId" : "signoff_password",
+        "xtype" : "xcp_text_input",
+        "fieldLabel" : "${_UI_UIStep_xcp_signoff_reject_one_signoff_password_fieldLabel}",
+        "hstretch" : true,
+        "valueType" : "STRING",
+        "inputType" : "password"
+      } ]
+    } ]
+  } ]
+}

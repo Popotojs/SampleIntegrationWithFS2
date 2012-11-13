@@ -1,0 +1,54 @@
+{
+  "padding" : "10 10 5 10",
+  "border" : false,
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "userorgroup_selecti_staless_ds_1",
+      "actionModel" : "xcp_userorgroup_selecti_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ ],
+        "mapping" : {
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : true
+    } ]
+  }, {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "username_dropdown_list",
+        "xtype" : "xcp_dropdown_list_multi",
+        "fieldLabel" : "${_UI_UIStep_xcp_signoff_usergroup_multi_username_dropdown_list_fieldLabel}",
+        "valueField" : "user_group_name",
+        "displayField" : "user_group_name",
+        "store" : "userorgroup_selecti_staless_ds_1"
+      }, {
+        "xcpId" : "signoff_password",
+        "xtype" : "xcp_text_input",
+        "fieldLabel" : "${_UI_UIStep_xcp_signoff_usergroup_multi_signoff_password_fieldLabel}",
+        "hstretch" : true,
+        "valueType" : "STRING",
+        "inputType" : "password"
+      } ]
+    } ]
+  } ]
+}

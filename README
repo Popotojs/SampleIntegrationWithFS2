@@ -1,0 +1,10 @@
+"DesignerProjects" repository contains xCP 2.0 project samples created with the Designer.
+ - "FS2Services" is a simple project using custom java module to access Federated Search Services with a set of basic processes.
+ - "Federated_Banks" is a sample application using "FS2Services" project (the dependant project is packaged as a lib in the application).
+ 
+"FS2Adapters" repository contains custom adapters that can be used in a FS2 Server.
+ - "FS2_FFIEC_Adapter.zip" is an adapter on the FFIEC (Federal Financial Institutions Examination Council's) web service and is used by the "Federated_Banks" application example
+ 
+ExtensionCodeProjects contains Java code projects that can be packaged as a module and used as an extension in xCP 2.0 projects
+ - "fs2access" is an eclipse Java project containing examples of Java code to access FS2 server through DFC. This code is used by the "FS2Services" xCP 2.0 project once packaged as a xCP 2.0 Java module.
+ 

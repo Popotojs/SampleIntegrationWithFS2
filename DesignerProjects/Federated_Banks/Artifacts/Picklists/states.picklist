@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsPicklist:Picklist xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsPicklist="http://xcp.emc.com/picklist" urn="urn:bank:com.emc.xcp.artifact.picklist:Artifacts/Picklists/states.picklist" categoryId="com.emc.xcp.artifact.picklist" name="states" label="U.S States" description="List of U.S States">
+  <type xsi:type="nsAttributeDatatypes:StringType"/>
+  <entries label="Alabama" value="AL"/>
+  <entries label="Alaska" value="AK"/>
+  <entries label="Arizona" value="AZ"/>
+  <entries label="Arkansas" value="AR"/>
+  <entries label="California" value="CA"/>
+  <entries label="Colorado" value="CO"/>
+  <entries label="Connecticut" value="CT"/>
+  <entries label="Delaware" value="DE"/>
+  <entries label="Florida" value="FL"/>
+  <entries label="Georgia" value="GA"/>
+  <entries label="Hawaii" value="HI"/>
+  <entries label="Idaho" value="ID"/>
+  <entries label="Illinois" value="IL"/>
+  <entries label="Indiana" value="IN"/>
+  <entries label="Iowa" value="IA"/>
+  <entries label="Kansas" value="KS"/>
+  <entries label="Kentucky" value="KY"/>
+  <entries label="Louisiana" value="LA"/>
+  <entries label="Maine" value="ME"/>
+  <entries label="Maryland" value="MD"/>
+  <entries label="Massachusetts" value="MA"/>
+  <entries label="Michigan" value="MI"/>
+  <entries label="Minnesota" value="MN"/>
+  <entries label="Mississippi" value="MS"/>
+  <entries label="Missouri" value="MO"/>
+  <entries label="Montana" value="MT"/>
+  <entries label="Nebraska" value="NE"/>
+  <entries label="Nevada" value="NV"/>
+  <entries label="New Hampshire" value="NH"/>
+  <entries label="New Jersey" value="NJ"/>
+  <entries label="New Mexico" value="NM"/>
+  <entries label="New York" value="NY"/>
+  <entries label="North Carolina" value="NC"/>
+  <entries label="North Dakota" value="ND"/>
+  <entries label="Ohio" value="OH"/>
+  <entries label="Oklahoma" value="OK"/>
+  <entries label="Oregon" value="OR"/>
+  <entries label="Pennsylvania" value="PA"/>
+  <entries label="Rhode Island" value="RI"/>
+  <entries label="South Carolina" value="SC"/>
+  <entries label="South Dakota" value="SD"/>
+  <entries label="Tennessee" value="TN"/>
+  <entries label="Texas" value="TX"/>
+  <entries label="Utah" value="UT"/>
+  <entries label="Vermont" value="VT"/>
+  <entries label="Virginia" value="VA"/>
+  <entries label="Washington" value="WA"/>
+  <entries label="West Virginia" value="WV"/>
+  <entries label="Wisconsin" value="WI"/>
+  <entries label="Wyoming" value="WY"/>
+</nsPicklist:Picklist>

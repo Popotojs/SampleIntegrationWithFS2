@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsJavaModule:JavaModule xmlns:nsJavaModule="http://xcp.emc.com/javamodule"
+	urn="urn:fs2:com.emc.xcp.artifact.javamodule.category:Artifacts/Java Modules/fs2services.javamodule"
+	categoryId="com.emc.xcp.artifact.javamodule.category" name="fs2services"
+	label="External sources Services" implementationClass="com.documentum.fs2.xcp.impl.FS2ServicesImpl">
+	<implementationJars contentPath="content/modules/fs2api-impl.jar" />
+	<implementationJars contentPath="content/modules/xtrim-server.jar" />
+	<interfaceJars contentPath="content/modules/fs2api.jar" />
+	<interfaceJars contentPath="content/modules/xtrim-api.jar" />
+</nsJavaModule:JavaModule>s

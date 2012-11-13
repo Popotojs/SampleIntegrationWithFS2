@@ -1,0 +1,264 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_fs2_status_page_title}",
+  "xtype" : "xcp_form",
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "search_external_sou_initiate_staless_ds",
+      "actionModel" : "fs2_search_external_sou_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "query",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_status_page_search_external_sou_initiate_staless_ds_query_1",
+          "events" : ["query.change" ]
+        }, {
+          "propertyId" : "queryattr",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_status_page_search_external_sou_initiate_staless_ds_queryattr_1",
+          "events" : ["query_attr.change" ]
+        }, {
+          "propertyId" : "resultattr",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_status_page_search_external_sou_initiate_staless_ds_resultattr_1",
+          "events" : ["result_attr.change" ]
+        }, {
+          "propertyId" : "sourcename",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_status_page_search_external_sou_initiate_staless_ds_sourcename_1",
+          "events" : ["source.change" ]
+        } ],
+        "mapping" : {
+          "query" : ["query" ],
+          "queryattr" : ["query_attr" ],
+          "resultattr" : ["result_attr" ],
+          "sourcename" : ["source" ]
+        }
+      } ],
+      "pageSize" : 10,
+      "actionType" : "datasource",
+      "autoLoad" : false
+    }, {
+      "xcpId" : "list_external_sourc_initiate_staless_ds",
+      "actionModel" : "fs2_list_external_sourc_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ ],
+        "mapping" : {
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : true
+    }, {
+      "xcpId" : "list_query_attribut_initiate_staless_ds",
+      "actionModel" : "fs2_list_query_attribut_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "source",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_status_page_list_query_attribut_initiate_staless_ds_source_1",
+          "events" : ["source.change" ]
+        } ],
+        "mapping" : {
+          "source" : ["source" ]
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["source.change" ]
+    }, {
+      "xcpId" : "list_result_attribu_initiate_staless_ds",
+      "actionModel" : "fs2_list_result_attribu_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "source",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_status_page_list_result_attribu_initiate_staless_ds_source_1",
+          "events" : ["source.change" ]
+        } ],
+        "mapping" : {
+          "source" : ["source" ]
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["source.change" ]
+    }, {
+      "xcpId" : "get_source_descript_initiate_staless_ds",
+      "actionModel" : "fs2_get_source_descript_initiate_staless_ds_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "source",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_status_page_get_source_descript_initiate_staless_ds_source_1",
+          "events" : ["source.change" ]
+        } ],
+        "mapping" : {
+          "source" : ["source" ]
+        }
+      } ],
+      "actionType" : "datasource",
+      "autoLoad" : false,
+      "invokerEvents" : ["source.change" ],
+      "outputType" : "Object"
+    } ]
+  }, {
+    "xcpId" : "column_box3",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox5",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "image",
+        "xtype" : "xcp_image",
+        "imageSource" : "urn:fs2:com.emc.xcp.artifact.resource.image:Artifacts/Resources/logo-small.gif",
+        "behavior" : false,
+        "width" : 80,
+        "height" : 52,
+        "isInternal" : true
+      }, {
+        "xcpId" : "column_box4",
+        "xtype" : "xcp_column_box",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "items" : [ {
+          "xcpId" : "columnvbox6",
+          "xtype" : "xcp_columnvbox",
+          "orientation" : "Vertical",
+          "width" : "100%",
+          "overflow_x" : "hidden",
+          "labelWidth" : 150,
+          "labelAlign" : "left",
+          "halign" : "left",
+          "valign" : "top",
+          "defaultMargins" : "5",
+          "items" : [ {
+            "xcpId" : "source",
+            "xtype" : "xcp_dropdown_list",
+            "fieldLabel" : "${_UI_Page_fs2_status_page_source_fieldLabel}",
+            "valueField" : "sources",
+            "displayField" : "sources",
+            "store" : "list_external_sourc_initiate_staless_ds",
+            "valueType" : "STRING"
+          }, {
+            "xcpId" : "description",
+            "xtype" : "xcp_value_display",
+            "fieldLabel" : "${_UI_Page_fs2_status_page_description_fieldLabel}",
+            "valueType" : "STRING",
+            "isRepeating" : false,
+            "plugins" : [ {
+              "ptype" : "xcp_expression_properties",
+              "expression" : [ {
+                "propertyId" : "value",
+                "setterFunName" : "setValue",
+                "etype" : "fs2_status_page_description_value_1",
+                "events" : ["get_source_descript_initiate_staless_ds.change" ]
+              } ]
+            } ]
+          }, {
+            "xcpId" : "query_attr",
+            "xtype" : "xcp_dropdown_list",
+            "fieldLabel" : "${_UI_Page_fs2_status_page_query_attr_fieldLabel}",
+            "valueField" : "queryattributes",
+            "displayField" : "queryattributes",
+            "store" : "list_query_attribut_initiate_staless_ds",
+            "valueType" : "STRING"
+          }, {
+            "xcpId" : "result_attr",
+            "xtype" : "xcp_dropdown_list",
+            "fieldLabel" : "${_UI_Page_fs2_status_page_result_attr_fieldLabel}",
+            "valueField" : "resultattributes",
+            "displayField" : "resultattributes",
+            "store" : "list_result_attribu_initiate_staless_ds",
+            "valueType" : "STRING"
+          }, {
+            "xcpId" : "query",
+            "xtype" : "xcp_text_input",
+            "fieldLabel" : "${_UI_Page_fs2_status_page_query_fieldLabel}",
+            "hstretch" : true,
+            "valueType" : "STRING"
+          } ]
+        } ]
+      }, {
+        "xcpId" : "column_box5",
+        "xtype" : "xcp_column_box",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "items" : [ {
+          "xcpId" : "columnhbox",
+          "xtype" : "xcp_columnhbox",
+          "orientation" : "Horizontal",
+          "width" : "100%",
+          "overflow_x" : "hidden",
+          "labelWidth" : 50,
+          "defaultMargins" : "5",
+          "labelAlign" : "left",
+          "halign" : "right",
+          "valign" : "top",
+          "items" : [ {
+            "xcpId" : "button",
+            "xtype" : "xcp_button",
+            "text" : "${_UI_Page_fs2_status_page_button_text}",
+            "actionInstanceId" : "search_external_sou_initiate_staless_ds"
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "xcpId" : "results_list",
+    "xtype" : "xcp_results_list",
+    "typeName" : "fs2_search_external_sou_initiate",
+    "modelName" : "fs2_search_external_sou_initiate_staless_ds_outputs",
+    "storeId" : "search_external_sou_initiate_staless_ds",
+    "pageSize" : 10,
+    "selectionModel" : false,
+    "columns" : [ {
+      "xcpId" : "results_list_page_link_column",
+      "xtype" : "xcp_results_list_page_link_column",
+      "text" : "${_UI_Page_fs2_status_page_results_list_page_link_column_text}",
+      "width" : 150,
+      "dataIndex" : "id",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_Page_fs2_status_page_results_list_column_text}",
+      "dataIndex" : "results",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    } ]
+  } ]
+}

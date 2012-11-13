@@ -1,0 +1,204 @@
+{
+  "padding" : "10 10 5 10",
+  "border" : false,
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "folder_rt_query_1",
+      "actionModel" : "xcp_folder_rt_query_outputs",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "input_folder_id",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_selector_folder_ste_folder_rt_query_1_input_folder_id_1",
+          "events" : ["text_input.change" ]
+        } ],
+        "mapping" : {
+          "input_folder_id" : ["text_input" ]
+        }
+      } ],
+      "pageSize" : 10,
+      "actionType" : "datasource",
+      "autoLoad" : true
+    } ]
+  }, {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "column_box1",
+        "xtype" : "xcp_column_box",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "items" : [ {
+          "xcpId" : "columnvbox1",
+          "xtype" : "xcp_columnvbox",
+          "orientation" : "Vertical",
+          "width" : "100%",
+          "overflow_x" : "hidden",
+          "labelWidth" : 150,
+          "labelAlign" : "left",
+          "halign" : "left",
+          "valign" : "top",
+          "defaultMargins" : "5",
+          "items" : [ {
+            "xcpId" : "text_input",
+            "xtype" : "xcp_text_input",
+            "fieldLabel" : "${_UI_UIStep_xcp_selector_folder_ste_text_input_fieldLabel}",
+            "hstretch" : true,
+            "valueType" : "STRING"
+          } ]
+        } ]
+      }, {
+        "xcpId" : "column_box2",
+        "xtype" : "xcp_column_box",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "items" : [ {
+          "xcpId" : "columnhbox",
+          "xtype" : "xcp_columnhbox",
+          "orientation" : "Horizontal",
+          "width" : "100%",
+          "overflow_x" : "hidden",
+          "labelWidth" : 50,
+          "defaultMargins" : "5",
+          "labelAlign" : "left",
+          "halign" : "right",
+          "valign" : "top",
+          "items" : [ {
+            "xcpId" : "button",
+            "xtype" : "xcp_button",
+            "text" : "${_UI_UIStep_xcp_selector_folder_ste_button_text}",
+            "actionInstanceId" : "folder_rt_query_1"
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "xcpId" : "results_list",
+    "xtype" : "xcp_results_list",
+    "typeName" : "xcp_dm_folder",
+    "modelName" : "xcp_folder_rt_query_outputs",
+    "storeId" : "folder_rt_query_1",
+    "pageSize" : 10,
+    "selectionModel" : false,
+    "columns" : [ {
+      "xcpId" : "folder_list_lock_column",
+      "xtype" : "xcp_folder_list_lock_column",
+      "text" : "${_UI_UIStep_xcp_selector_folder_ste_folder_list_lock_column_text}",
+      "width" : 32,
+      "dataIndex" : "r_lock_owner",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_page_link_column",
+      "xtype" : "xcp_results_list_page_link_column",
+      "text" : "${_UI_UIStep_xcp_selector_folder_ste_results_list_page_link_column_text}",
+      "width" : 150,
+      "dataIndex" : "object_name",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_UIStep_xcp_selector_folder_ste_results_list_column_text}",
+      "width" : 150,
+      "dataIndex" : "r_creator_name",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column1",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_UIStep_xcp_selector_folder_ste_results_list_column1_text}",
+      "width" : 150,
+      "dataIndex" : "r_creation_date",
+      "valueType" : "DATETIME",
+      "isRepeating" : false,
+      "format" : {
+        "xtype" : "xcp_datetime_formatter",
+        "dateFormat" : "short",
+        "timeFormat" : "short",
+        "dateStyle" : "datetime"
+      },
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column2",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_UIStep_xcp_selector_folder_ste_results_list_column2_text}",
+      "width" : 150,
+      "dataIndex" : "r_modifier",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column3",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_UIStep_xcp_selector_folder_ste_results_list_column3_text}",
+      "width" : 150,
+      "dataIndex" : "r_modify_date",
+      "valueType" : "DATETIME",
+      "isRepeating" : false,
+      "format" : {
+        "xtype" : "xcp_datetime_formatter",
+        "dateFormat" : "short",
+        "timeFormat" : "short",
+        "dateStyle" : "datetime"
+      },
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column4",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_UIStep_xcp_selector_folder_ste_results_list_column4_text}",
+      "width" : 150,
+      "dataIndex" : "r_object_type",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column5",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_UIStep_xcp_selector_folder_ste_results_list_column5_text}",
+      "width" : 150,
+      "dataIndex" : "id",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    } ]
+  } ]
+}

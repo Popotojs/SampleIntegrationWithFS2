@@ -1,0 +1,145 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_page_not_found_title}",
+  "xtype" : "xcp_form",
+  "items" : [ {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5"
+    }, {
+      "xcpId" : "columnvbox1",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "500",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "50 0 5 5",
+      "items" : [ {
+        "xcpId" : "column_box1",
+        "xtype" : "xcp_column_box",
+        "collapsible" : false,
+        "collapsed" : false,
+        "collapseFirst" : true,
+        "border" : false,
+        "defaultMargins" : "5",
+        "layout" : "xcp_columnbox",
+        "cls" : "x-window-default",
+        "items" : [ {
+          "xcpId" : "columnvbox3",
+          "xtype" : "xcp_columnvbox",
+          "orientation" : "Vertical",
+          "overflow_x" : "hidden",
+          "labelWidth" : 150,
+          "labelAlign" : "left",
+          "halign" : "left",
+          "valign" : "top",
+          "defaultMargins" : "5",
+          "items" : [ {
+            "xcpId" : "column_box2",
+            "xtype" : "xcp_column_box",
+            "collapsible" : false,
+            "collapsed" : false,
+            "collapseFirst" : true,
+            "border" : false,
+            "defaultMargins" : "5",
+            "layout" : "xcp_columnbox",
+            "items" : [ {
+              "xcpId" : "columnvbox4",
+              "xtype" : "xcp_columnvbox",
+              "orientation" : "Vertical",
+              "overflow_x" : "hidden",
+              "labelWidth" : 150,
+              "labelAlign" : "left",
+              "halign" : "left",
+              "valign" : "top",
+              "defaultMargins" : "5",
+              "items" : [ {
+                "xcpId" : "header",
+                "xtype" : "xcp_rich_text",
+                "html" : "${_UI_Page_bank_page_not_found_header_html}"
+              }, {
+                "xcpId" : "column_box3",
+                "xtype" : "xcp_column_box",
+                "collapsible" : false,
+                "collapsed" : false,
+                "collapseFirst" : true,
+                "border" : false,
+                "defaultMargins" : "5",
+                "layout" : "xcp_columnbox",
+                "items" : [ {
+                  "xcpId" : "columnvbox5",
+                  "xtype" : "xcp_columnvbox",
+                  "orientation" : "Vertical",
+                  "width" : "37",
+                  "overflow_x" : "hidden",
+                  "labelWidth" : 150,
+                  "labelAlign" : "left",
+                  "halign" : "left",
+                  "valign" : "top",
+                  "defaultMargins" : "5",
+                  "items" : [ {
+                    "xcpId" : "warning_icon",
+                    "xtype" : "xcp_image",
+                    "imageSource" : "urn:xcpcomm:com.emc.xcp.artifact.resource.image:Artifacts/Resources/error_32.png",
+                    "behavior" : false,
+                    "width" : 32,
+                    "height" : 32,
+                    "isInternal" : true
+                  } ]
+                }, {
+                  "xcpId" : "columnvbox6",
+                  "xtype" : "xcp_columnvbox",
+                  "orientation" : "Vertical",
+                  "overflow_x" : "hidden",
+                  "labelWidth" : 150,
+                  "labelAlign" : "left",
+                  "halign" : "left",
+                  "valign" : "top",
+                  "defaultMargins" : "5",
+                  "items" : [ {
+                    "xcpId" : "information",
+                    "xtype" : "xcp_rich_text",
+                    "html" : "${_UI_Page_bank_page_not_found_information_html}"
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      }, {
+        "xcpId" : "rich_text",
+        "xtype" : "xcp_rich_text",
+        "style" : "height:20px"
+      } ]
+    }, {
+      "xcpId" : "columnvbox2",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5"
+    } ]
+  } ]
+}

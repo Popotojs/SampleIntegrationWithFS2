@@ -1,0 +1,95 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_view_bank_title}",
+  "xtype" : "xcp_form",
+  "models" : [ "bank_bank" ],
+  "items" : [ {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "title" : "${_UI_Page_bank_view_bank_column_box_title}",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox1",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "image",
+        "xtype" : "xcp_image",
+        "imageSource" : "urn:bank:com.emc.xcp.artifact.resource.image:Artifacts/Resources/bank.png",
+        "behavior" : false,
+        "width" : 32,
+        "height" : 32,
+        "isInternal" : true
+      }, {
+        "xcpId" : "name",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_bank_view_bank_name_fieldLabel}",
+        "valueType" : "STRING",
+        "isRepeating" : false,
+        "name" : "bank_bank@object_name"
+      }, {
+        "xcpId" : "city",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_bank_view_bank_city_fieldLabel}",
+        "valueType" : "STRING",
+        "isRepeating" : false,
+        "name" : "bank_bank@city"
+      }, {
+        "xcpId" : "fdic_certificate",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_bank_view_bank_fdic_certificate_fieldLabel}",
+        "valueType" : "STRING",
+        "isRepeating" : false,
+        "name" : "bank_bank@fdic_certificate"
+      }, {
+        "xcpId" : "rssd_id",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_bank_view_bank_rssd_id_fieldLabel}",
+        "valueType" : "STRING",
+        "isRepeating" : false,
+        "name" : "bank_bank@rssd_id"
+      }, {
+        "xcpId" : "state",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_bank_view_bank_state_fieldLabel}",
+        "valueType" : "xcp.picklist.bank_states",
+        "isRepeating" : false,
+        "name" : "bank_bank@state"
+      }, {
+        "xcpId" : "content_folder",
+        "xtype" : "xcp_value_display",
+        "fieldLabel" : "${_UI_Page_bank_view_bank_content_folder_fieldLabel}",
+        "valueType" : "STRING",
+        "isRepeating" : false,
+        "name" : "bank_bank@content_folder"
+      }, {
+        "xcpId" : "folder_view",
+        "xtype" : "xcp_folder_view",
+        "isID" : true,
+        "showRootFiles" : true,
+        "minWidth" : 500,
+        "plugins" : [ {
+          "ptype" : "xcp_expression_properties",
+          "expression" : [ {
+            "propertyId" : "root",
+            "setterFunName" : "setFolderRoot",
+            "etype" : "bank_view_bank_folder_view_root_1",
+            "events" : ["bank_bank.change","bank_bank.load" ]
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

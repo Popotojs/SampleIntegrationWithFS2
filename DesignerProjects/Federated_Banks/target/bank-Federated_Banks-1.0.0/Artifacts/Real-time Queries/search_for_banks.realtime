@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<realtime:RealTimeSearch xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsDatatypes="http://xcp.emc.com/datatypes" xmlns:realtime="http://xcp.emc.com/search/realtime" urn="urn:bank:com.emc.xcp.artifact.search.realtime:Artifacts/Real-time Queries/search_for_banks.realtime" categoryId="com.emc.xcp.artifact.search.realtime" name="search_for_banks" label="Search for Banks">
+  <datasource categoryId="com.emc.xcp.artifact.dataservice.datasourcecontract" name="search_for_banks" label="Search for Banks" implCategoryId="com.emc.xcp.artifact.search.realtime">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="input_name" label="Name">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="input_rssd_id" label="RSSD ID">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="input_state" label="State">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <outputs xsi:type="nsDataserviceContract:AttributeElement" name="Result Count">
+      <attributeType xsi:type="nsAttributeDatatypes:IntegerType"/>
+    </outputs>
+    <outputs xsi:type="nsDataserviceContract:ArrayElement" name="Results">
+      <item xsi:type="nsDataserviceContract:StructureElement" name="Items">
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="id" label="Object ID">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="object_name" label="Name">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="rssd_id" label="RSSD ID">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="fdic_certificate" label="FDIC Certificate">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="city" label="City">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="state" label="State">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="r_object_type" label="Object type" sortable="true" hidden="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+      </item>
+    </outputs>
+    <primaryElement>
+      <dataModel href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+    </primaryElement>
+  </datasource>
+  <inputParameters label="Name" name="name">
+    <formInputs xsi:type="realtime:RealTimeStringFormInput" operator="com.emc.xcp.model.common.StringOperator:CONTAIN">
+      <contextSelection>
+        <parentRef>
+          <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+        </parentRef>
+        <dataRef href="urn:xcp:com.emc.xcp.artifact.basetype:Artifacts/Base Type/basetype.basetype#//@attributes[name='object_name']"/>
+      </contextSelection>
+    </formInputs>
+  </inputParameters>
+  <inputParameters label="RSSD ID" name="rssd_id">
+    <formInputs xsi:type="realtime:RealTimeStringFormInput" operator="com.emc.xcp.model.common.StringOperator:CONTAIN">
+      <contextSelection>
+        <parentRef>
+          <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+        </parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#//@attributes[name='rssd_id']"/>
+      </contextSelection>
+    </formInputs>
+  </inputParameters>
+  <inputParameters label="State" name="state">
+    <formInputs xsi:type="realtime:RealTimeStringFormInput" operator="com.emc.xcp.model.common.StringOperator:CONTAIN">
+      <contextSelection>
+        <parentRef>
+          <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+        </parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#//@attributes[name='state']"/>
+      </contextSelection>
+    </formInputs>
+  </inputParameters>
+  <columns label="Object ID">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:xcp:com.emc.xcp.artifact.basetype:Artifacts/Base Type/basetype.basetype#//@attributes[name='r_object_id']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Name">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:xcp:com.emc.xcp.artifact.basetype:Artifacts/Base Type/basetype.basetype#//@attributes[name='object_name']"/>
+    </contextSelection>
+  </columns>
+  <columns label="RSSD ID">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#//@attributes[name='rssd_id']"/>
+    </contextSelection>
+  </columns>
+  <columns label="FDIC Certificate">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#//@attributes[name='fdic_certificate']"/>
+    </contextSelection>
+  </columns>
+  <columns label="City">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#//@attributes[name='city']"/>
+    </contextSelection>
+  </columns>
+  <columns label="State">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#//@attributes[name='state']"/>
+    </contextSelection>
+  </columns>
+  <defaultSort ascending="true"/>
+  <dataType xsi:type="nsDatatypes:BusinessObject" href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+  <resultOrientation>
+    <dataRef href="urn:bank:com.emc.xcp.artifact.bo:Artifacts/Business Objects/bank.businessobj#/"/>
+  </resultOrientation>
+</realtime:RealTimeSearch>

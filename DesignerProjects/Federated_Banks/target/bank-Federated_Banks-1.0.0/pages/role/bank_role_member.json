@@ -1,0 +1,58 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_role_member_title}",
+  "xtype" : "xcp_form",
+  "items" : [ {
+    "xcpId" : "breadcrumb",
+    "xtype" : "xcp_breadcrumb",
+    "text" : "${_UI_Page_bank_role_member_breadcrumb_text}",
+    "sub_text" : "${_UI_Page_bank_role_member_breadcrumb_sub_text}",
+    "xcp_nav_url" : "bank_manage_app_role",
+    "xcp_data_path" : "application/role/"
+  }, {
+    "xcpId" : "admin_results_list",
+    "xtype" : "xcp_admin_results_list",
+    "typeName" : "RoleMember",
+    "modelName" : "xcp.admin.model.RoleMember",
+    "pageSize" : 25,
+    "storeId" : "roleMembersStore",
+    "selectionModelName" : "xcp.admin.selection.CheckboxModel",
+    "columns" : [ {
+      "xcpId" : "results_list_column",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_Page_bank_role_member_results_list_column_text}",
+      "width" : 150,
+      "dataIndex" : "name",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_email_link_column",
+      "xtype" : "xcp_results_list_email_link_column",
+      "text" : "${_UI_Page_bank_role_member_results_list_email_link_column_text}",
+      "dataIndex" : "email"
+    }, {
+      "xcpId" : "results_list_column1",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_Page_bank_role_member_results_list_column1_text}",
+      "width" : 150,
+      "dataIndex" : "type",
+      "valueType" : "xcp.picklist._xcpMemberTypes",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    }, {
+      "xcpId" : "results_list_column2",
+      "xtype" : "xcp_results_list_column",
+      "text" : "${_UI_Page_bank_role_member_results_list_column2_text}",
+      "width" : 150,
+      "dataIndex" : "description",
+      "valueType" : "STRING",
+      "isRepeating" : false,
+      "sortable" : false,
+      "menuDisabled" : true
+    } ]
+  } ]
+}

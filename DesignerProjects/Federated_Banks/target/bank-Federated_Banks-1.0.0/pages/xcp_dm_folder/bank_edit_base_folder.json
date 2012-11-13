@@ -1,0 +1,96 @@
+{
+  "padding" : "0",
+  "border" : false,
+  "pageTitle" : "${_UI_Page_bank_edit_base_folder_title}",
+  "xtype" : "xcp_form",
+  "modelImmutable" : true,
+  "models" : [ "xcp_dm_folder" ],
+  "items" : [ {
+    "xtype" : "xcp_action_container",
+    "actions" : [ {
+      "xcpId" : "da_def_update_dm_folder_button",
+      "defaultConfirmationPrompt" : "Are you sure you want to update the item?",
+      "showConfirmation" : true,
+      "redirectStyle" : "specified",
+      "showSuccessNotification" : true,
+      "actionType" : "update",
+      "redirectUrl" : "bank_view_base_folder",
+      "redirectUrlModel" : "xcp_dm_folder",
+      "actionModel" : "xcp_da_def_update_dm_folder",
+      "plugins" : [ {
+        "ptype" : "xcp_expression_properties",
+        "expression" : [ {
+          "propertyId" : "object_name",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_edit_base_folder_da_def_update_dm_folder_object_name_1",
+          "events" : ["object_name.change" ]
+        }, {
+          "propertyId" : "id",
+          "setterFunName" : "setInputProperty",
+          "etype" : "bank_edit_base_folder_da_def_update_dm_folder_id_1",
+          "events" : ["xcp_dm_folder.change","xcp_dm_folder.load" ]
+        } ],
+        "mapping" : {
+          "object_name" : ["object_name" ]
+        }
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "width" : "100%",
+      "split" : true,
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "object_name",
+        "xtype" : "xcp_text_input",
+        "fieldLabel" : "${_UI_Page_bank_edit_base_folder_object_name_fieldLabel}",
+        "hstretch" : true,
+        "valueType" : "STRING",
+        "name" : "xcp_dm_folder@object_name"
+      } ]
+    } ]
+  }, {
+    "xcpId" : "column_box1",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnhbox",
+      "xtype" : "xcp_columnhbox",
+      "orientation" : "Horizontal",
+      "width" : "100%",
+      "overflow_x" : "hidden",
+      "labelWidth" : 50,
+      "defaultMargins" : "5",
+      "labelAlign" : "left",
+      "halign" : "right",
+      "valign" : "top",
+      "items" : [ {
+        "xcpId" : "button",
+        "xtype" : "xcp_button",
+        "text" : "${_UI_Page_bank_edit_base_folder_button_text}",
+        "actionInstanceId" : "da_def_update_dm_folder_button"
+      } ]
+    } ]
+  } ]
+}

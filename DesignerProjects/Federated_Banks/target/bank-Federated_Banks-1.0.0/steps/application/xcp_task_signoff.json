@@ -1,0 +1,33 @@
+{
+  "padding" : "10 10 5 10",
+  "border" : false,
+  "items" : [ {
+    "xcpId" : "column_box",
+    "xtype" : "xcp_column_box",
+    "collapsible" : false,
+    "collapsed" : false,
+    "collapseFirst" : true,
+    "border" : false,
+    "defaultMargins" : "5",
+    "layout" : "xcp_columnbox",
+    "items" : [ {
+      "xcpId" : "columnvbox",
+      "xtype" : "xcp_columnvbox",
+      "orientation" : "Vertical",
+      "overflow_x" : "hidden",
+      "labelWidth" : 150,
+      "labelAlign" : "left",
+      "halign" : "left",
+      "valign" : "top",
+      "defaultMargins" : "5",
+      "items" : [ {
+        "xcpId" : "signoff_password",
+        "xtype" : "xcp_text_input",
+        "fieldLabel" : "${_UI_UIStep_xcp_task_signoff_signoff_password_fieldLabel}",
+        "hstretch" : true,
+        "valueType" : "STRING",
+        "inputType" : "password"
+      } ]
+    } ]
+  } ]
+}

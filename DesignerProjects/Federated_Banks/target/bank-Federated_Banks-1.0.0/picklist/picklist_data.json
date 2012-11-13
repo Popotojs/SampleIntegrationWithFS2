@@ -1,0 +1,300 @@
+{
+"_xcpMemberTypes":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "user",
+"label": "${_UI_PickList__xcpMemberTypes_user}"
+},
+{
+"value": "group",
+"label": "${_UI_PickList__xcpMemberTypes_group}"
+}]
+},
+"xcp_taskwqflagpicklist":{
+"model": "xcp.picklist.models.IntegerModel",
+"data": [{
+"value": 1,
+"label": "${_UI_PickList_xcp_taskwqflagpicklist_1}"
+},
+{
+"value": 0,
+"label": "${_UI_PickList_xcp_taskwqflagpicklist_0}"
+}]
+},
+"xcp_wq_view_filter":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "SHOW_ALL_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_ALL_TASKS}"
+},
+{
+"value": "SHOW_PROCESSOR_ELIGIBLE_AND_OWNED_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_PROCESSOR_ELIGIBLE_AND_OWNED_TASKS}"
+},
+{
+"value": "SHOW_UNASSIGNED_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_UNASSIGNED_TASKS}"
+},
+{
+"value": "SHOW_PROCESSOR_ELIGIBLE_TASKS",
+"label": "${_UI_PickList_xcp_wq_view_filter_SHOW_PROCESSOR_ELIGIBLE_TASKS}"
+}]
+},
+"xcp_task_state":{
+"model": "xcp.picklist.models.IntegerModel",
+"data": [{
+"value": 0,
+"label": "${_UI_PickList_xcp_task_state_0}"
+},
+{
+"value": 1,
+"label": "${_UI_PickList_xcp_task_state_1}"
+},
+{
+"value": 2,
+"label": "${_UI_PickList_xcp_task_state_2}"
+},
+{
+"value": 3,
+"label": "${_UI_PickList_xcp_task_state_3}"
+},
+{
+"value": 4,
+"label": "${_UI_PickList_xcp_task_state_4}"
+},
+{
+"value": 5,
+"label": "${_UI_PickList_xcp_task_state_5}"
+},
+{
+"value": 6,
+"label": "${_UI_PickList_xcp_task_state_6}"
+},
+{
+"value": 7,
+"label": "${_UI_PickList_xcp_task_state_7}"
+}]
+},
+"bank_states":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "AL",
+"label": "${_UI_PickList_bank_states_AL}"
+},
+{
+"value": "AK",
+"label": "${_UI_PickList_bank_states_AK}"
+},
+{
+"value": "AZ",
+"label": "${_UI_PickList_bank_states_AZ}"
+},
+{
+"value": "AR",
+"label": "${_UI_PickList_bank_states_AR}"
+},
+{
+"value": "CA",
+"label": "${_UI_PickList_bank_states_CA}"
+},
+{
+"value": "CO",
+"label": "${_UI_PickList_bank_states_CO}"
+},
+{
+"value": "CT",
+"label": "${_UI_PickList_bank_states_CT}"
+},
+{
+"value": "DE",
+"label": "${_UI_PickList_bank_states_DE}"
+},
+{
+"value": "FL",
+"label": "${_UI_PickList_bank_states_FL}"
+},
+{
+"value": "GA",
+"label": "${_UI_PickList_bank_states_GA}"
+},
+{
+"value": "HI",
+"label": "${_UI_PickList_bank_states_HI}"
+},
+{
+"value": "ID",
+"label": "${_UI_PickList_bank_states_ID}"
+},
+{
+"value": "IL",
+"label": "${_UI_PickList_bank_states_IL}"
+},
+{
+"value": "IN",
+"label": "${_UI_PickList_bank_states_IN}"
+},
+{
+"value": "IA",
+"label": "${_UI_PickList_bank_states_IA}"
+},
+{
+"value": "KS",
+"label": "${_UI_PickList_bank_states_KS}"
+},
+{
+"value": "KY",
+"label": "${_UI_PickList_bank_states_KY}"
+},
+{
+"value": "LA",
+"label": "${_UI_PickList_bank_states_LA}"
+},
+{
+"value": "ME",
+"label": "${_UI_PickList_bank_states_ME}"
+},
+{
+"value": "MD",
+"label": "${_UI_PickList_bank_states_MD}"
+},
+{
+"value": "MA",
+"label": "${_UI_PickList_bank_states_MA}"
+},
+{
+"value": "MI",
+"label": "${_UI_PickList_bank_states_MI}"
+},
+{
+"value": "MN",
+"label": "${_UI_PickList_bank_states_MN}"
+},
+{
+"value": "MS",
+"label": "${_UI_PickList_bank_states_MS}"
+},
+{
+"value": "MO",
+"label": "${_UI_PickList_bank_states_MO}"
+},
+{
+"value": "MT",
+"label": "${_UI_PickList_bank_states_MT}"
+},
+{
+"value": "NE",
+"label": "${_UI_PickList_bank_states_NE}"
+},
+{
+"value": "NV",
+"label": "${_UI_PickList_bank_states_NV}"
+},
+{
+"value": "NH",
+"label": "${_UI_PickList_bank_states_NH}"
+},
+{
+"value": "NJ",
+"label": "${_UI_PickList_bank_states_NJ}"
+},
+{
+"value": "NM",
+"label": "${_UI_PickList_bank_states_NM}"
+},
+{
+"value": "NY",
+"label": "${_UI_PickList_bank_states_NY}"
+},
+{
+"value": "NC",
+"label": "${_UI_PickList_bank_states_NC}"
+},
+{
+"value": "ND",
+"label": "${_UI_PickList_bank_states_ND}"
+},
+{
+"value": "OH",
+"label": "${_UI_PickList_bank_states_OH}"
+},
+{
+"value": "OK",
+"label": "${_UI_PickList_bank_states_OK}"
+},
+{
+"value": "OR",
+"label": "${_UI_PickList_bank_states_OR}"
+},
+{
+"value": "PA",
+"label": "${_UI_PickList_bank_states_PA}"
+},
+{
+"value": "RI",
+"label": "${_UI_PickList_bank_states_RI}"
+},
+{
+"value": "SC",
+"label": "${_UI_PickList_bank_states_SC}"
+},
+{
+"value": "SD",
+"label": "${_UI_PickList_bank_states_SD}"
+},
+{
+"value": "TN",
+"label": "${_UI_PickList_bank_states_TN}"
+},
+{
+"value": "TX",
+"label": "${_UI_PickList_bank_states_TX}"
+},
+{
+"value": "UT",
+"label": "${_UI_PickList_bank_states_UT}"
+},
+{
+"value": "VT",
+"label": "${_UI_PickList_bank_states_VT}"
+},
+{
+"value": "VA",
+"label": "${_UI_PickList_bank_states_VA}"
+},
+{
+"value": "WA",
+"label": "${_UI_PickList_bank_states_WA}"
+},
+{
+"value": "WV",
+"label": "${_UI_PickList_bank_states_WV}"
+},
+{
+"value": "WI",
+"label": "${_UI_PickList_bank_states_WI}"
+},
+{
+"value": "WY",
+"label": "${_UI_PickList_bank_states_WY}"
+}]
+},
+"xcp_taskstatuspiclkist":{
+"model": "xcp.picklist.models.StringModel",
+"data": [{
+"value": "dormant",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_dormant}"
+},
+{
+"value": "acquired",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_acquired}"
+},
+{
+"value": "ready",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_ready}"
+},
+{
+"value": "paused",
+"label": "${_UI_PickList_xcp_taskstatuspiclkist_paused}"
+}]
+}
+}
